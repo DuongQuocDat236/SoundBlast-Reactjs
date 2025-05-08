@@ -14,18 +14,23 @@ const SearchBar = () => {
 
   return (
     <form onSubmit={handleSearch} className="d-flex">
-      <input
-      type="search"
-      placeholder="Enter song name"
-      className="me-2"
-      aria-label="Search"
-      style={{ width: "320px", height: "38px"}}
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
-      />
-      <button type="submit"  className="btn btn-light ms-2">
-        Search
-      </button>
+        <div className="input-group" style={{ width: "360px" }}>
+          <input
+            type="search"
+            className="form-control rounded-start-pill ps-3"
+            placeholder="Enter song name"
+            aria-label="Search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button
+            className="btn btn-light rounded-end-pill px-2"
+            type="submit"
+            title="Search"
+          >
+            🔍
+          </button>
+        </div>
     </form>
   );
 };

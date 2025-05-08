@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Container, Row, Col } from "react-bootstrap";
+import CustomAudioCard from "./CustomAudioCard";
 
 const SearchResultPage = () => {
   const [results, setResults] = useState([]);
   const { search } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const query = new URLSearchParams(search).get("query");
@@ -16,15 +19,35 @@ const SearchResultPage = () => {
     }
   }, [search]);
 
+  const handleCardClick = (songId) => {
+    navigate(`/song/${songId}`);
+  };
+
   return (
-    <div className="container mt-4">
-      <h3>Search Results</h3>
-      <ul>
-        {results.map((song) => (
-          <li key={song.id}>{song.title} - {song.artist}</li>
-        ))}
-      </ul>
-    </div>
+    <Container className="my-5">
+      <h2 className="mb-4 text-center fw-bold">Search Results</h2>
+      <Row>
+        {results.length === 0 ? (
+          <p className="text-center">No results found.</p>
+        ) : (
+          results.map((song) => (
+            <Col key={song.id} md={6} lg={4} className="mb-4">
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => handleCardClick(song.id)}
+              >
+                <CustomAudioCard
+                  image={`http://localhost:8000/${song.image}`}
+                  title={song.title}
+                  artist={song.artist}
+                  audioSrc={`http://localhost:8000/${song.audio}`}
+                />
+              </div>
+            </Col>
+          ))
+        )}
+      </Row>
+    </Container>
   );
 };
 
