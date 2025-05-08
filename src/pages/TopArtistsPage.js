@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import favourite from "../data/Datatopartists/favourite.json";
 import hotsearch from "../data/Datatopartists/hotsearch.json";
 import latest from "../data/Datatopartists/Latest.json";
@@ -50,19 +50,21 @@ const TopArtistsPage = () => {
 
   const handlePlay = (item) => {
     const audioSrc = item.audio;
-    // Pause current audio if exists and different from new audio
+
     if (currentAudio && currentAudio !== audioSrc && audioRefs.current[currentAudio]) {
       audioRefs.current[currentAudio].pause();
       audioRefs.current[currentAudio].currentTime = 0;
     }
-    // If same audio, reset to start
+
     if (currentAudio === audioSrc && audioRefs.current[audioSrc]) {
       audioRefs.current[audioSrc].currentTime = 0;
     }
+
     setCurrentAudio(audioSrc);
-    setCurrentSong({ title: item.title, artist: item.artist });
+    setCurrentSong({ title: item.title, artist: item.artist, image: item.image });
     setIsPlaying(true);
     setProgresses((prev) => ({ ...prev, [audioSrc]: 0 }));
+
     if (audioRefs.current[audioSrc]) {
       audioRefs.current[audioSrc].play();
     }
@@ -97,42 +99,11 @@ const TopArtistsPage = () => {
   return (
     <div className={styles.topArtistsPage}>
       <h1 className={styles.mainTitle}>Top ca sĩ</h1>
-      <Section
-        title="Hot Search"
-        data={hotsearch}
-        onPlay={handlePlay}
-        currentAudio={currentAudio}
-        audioRefs={audioRefs}
-        progresses={progresses}
-        durations={durations}
-      />
-      <Section
-        title="Yêu thích"
-        data={favourite}
-        onPlay={handlePlay}
-        currentAudio={currentAudio}
-        audioRefs={audioRefs}
-        progresses={progresses}
-        durations={durations}
-      />
-      <Section
-        title="Mới nhất"
-        data={latest}
-        onPlay={handlePlay}
-        currentAudio={currentAudio}
-        audioRefs={audioRefs}
-        progresses={progresses}
-        durations={durations}
-      />
-      <Section
-        title="Lượt tìm kiếm"
-        data={searchhits}
-        onPlay={handlePlay}
-        currentAudio={currentAudio}
-        audioRefs={audioRefs}
-        progresses={progresses}
-        durations={durations}
-      />
+
+      <Section title="Hot Search" data={hotsearch} {...{ onPlay: handlePlay, currentAudio, audioRefs, progresses, durations }} />
+      <Section title="Yêu thích" data={favourite} {...{ onPlay: handlePlay, currentAudio, audioRefs, progresses, durations }} />
+      <Section title="Mới nhất" data={latest} {...{ onPlay: handlePlay, currentAudio, audioRefs, progresses, durations }} />
+      <Section title="Lượt tìm kiếm" data={searchhits} {...{ onPlay: handlePlay, currentAudio, audioRefs, progresses, durations }} />
 
       {currentAudio && (
         <div className={styles.audioPlayerContainer}>
@@ -147,14 +118,14 @@ const TopArtistsPage = () => {
             onEnded={() => setIsPlaying(false)}
           />
           <div className={styles.audioControls}>
+            {currentSong?.image && (
+              <img src={currentSong.image} alt={currentSong.title} className={styles.songThumbnail} />
+            )}
             <div className={styles.songInfo}>
               <span className={styles.songTitle}>{currentSong?.title || 'Unknown Title'}</span>
               <span className={styles.songArtist}>{currentSong?.artist || 'Unknown Artist'}</span>
             </div>
-            <button
-              onClick={() => togglePlayPause(currentAudio)}
-              className={styles.playPauseButton}
-            >
+            <button onClick={() => togglePlayPause(currentAudio)} className={styles.playPauseButton}>
               {isPlaying ? '❚❚' : '▶'}
             </button>
             <div className={styles.progressContainer}>

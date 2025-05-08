@@ -15,7 +15,7 @@ const OldSongsPage = () => {
 
   const renderSongCard = (song) => (
     <div key={song.id} className={styles.songCard}>
-      <img src={song.cover} alt={song.title} />
+      <img src={song.cover} alt={song.title} className={styles.songImage} />
       <p className={styles.songTitle}>{song.title}</p>
       <p className={styles.songArtist}>{song.artist}</p>
       <audio
@@ -46,7 +46,6 @@ const OldSongsPage = () => {
         <h1 className={styles.coverTitle}>OLD SONG</h1>
       </div>
 
-      <p className={styles.coverFooterText}></p>
       <div className={styles.coverFooter}><hr /></div>
 
       <div className={styles.musicContainer}>

@@ -99,4 +99,45 @@ span {
   padding: 10px;
   border-radius: 5px;
 }
+.nowPlaying {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nowPlayingImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.nowPlayingInfo {
+  flex-grow: 1;
+}
+
+.nowPlayingButton {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.nowPlayingProgress {
+  flex-grow: 2;
+}
+
+.timeText {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
 
