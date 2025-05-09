@@ -1,32 +1,52 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import React from 'react';
+import styles from './LanguagesPage.module.css';
+import songsData from '../data/languagespage.json';
 
 const LanguagesPage = () => {
-  const [languages, setLanguages] = useState([]);
-
-  useEffect(() => {
-    axios.get("/data/languages.json")
-      .then(res => setLanguages(res.data))
-      .catch(err => console.error("Error fetching languages", err));
-  }, []);
+  const heroSong = songsData[0];
+  const categories = ['Trung', 'Han', 'Nhat', 'US'];
+  const getSongsByCountry = (country) =>
+    songsData.filter((song) => song.country === country).slice(0, 4);
 
   return (
-    <Container className="py-5">
-      <h2 className="text-center mb-4">Languages</h2>
-      <Row>
-        {languages.map((lang, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card className="h-100 text-center">
-              <Card.Body>
-                <Card.Title>{lang.name}</Card.Title>
-                <Card.Text>{lang.region}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+    <div className={styles.page}>
+      {/* Hero section */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <img src={heroSong.image} alt={heroSong.title} className={styles.heroImage} />
+          <div className={styles.heroInfo}>
+            <h2>{heroSong.title}</h2>
+            <p>{heroSong.artist}</p>
+            <audio controls src={heroSong.audio} className={styles.audio}></audio>
+          </div>
+        </div>
+      </section>
+
+      {/* Song Grid in 2 rows, 2 columns each */}
+      <section className={styles.grid}>
+        {[0, 1].map((rowIdx) => (
+          <div key={rowIdx} className={styles.row}>
+            {categories.slice(rowIdx * 2, rowIdx * 2 + 2).map((country) => (
+              <div key={country} className={styles.column}>
+                <h3 className={styles.categoryTitle}>See what's new in {country}</h3>
+                {getSongsByCountry(country).map((song) => (
+                  <div key={song.id} className={styles.songCard}>
+                    <img src={song.image} alt={song.title} className={styles.songImage} />
+                    <div className={styles.songInfo}>
+                      <p className={styles.title}>{song.title}</p>
+                      <p className={styles.artist}>{song.artist}</p>
+                    </div>
+                    <audio controls className={styles.songAudio}>
+                      <source src={song.audio} type="audio/mp3" />
+                    </audio>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         ))}
-      </Row>
-    </Container>
+      </section>
+    </div>
   );
 };
 

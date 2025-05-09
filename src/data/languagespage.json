@@ -1,0 +1,131 @@
+[
+    {
+      "id": 1,
+      "title": "Need You Now",
+      "artist": "Lady A",
+      "audio":  "audio/audiolanguages/audious/needtoknow.mp3",
+      "image": "images/imageslanguages/imagesus/needtoknow.jpg",
+      "country": "US"
+    },
+    {
+        "id": 2,
+        "title": "Say So",
+        "artist": "Doja Cat",
+        "audio":  "audio/audiolanguages/audious/sayso.mp3",
+        "image": "images/imageslanguages/imagesus/sayso.jpg",
+        "country": "US"
+      },
+      {
+        "id": 3,
+        "title": "Take It Off",
+        "artist": "Kesha",
+        "audio":  "audio/audiolanguages/audious/takeitoff.mp3",
+        "image": "images/imageslanguages/imagesus/takeitoff.jpg",
+        "country": "US"
+    },
+    {
+        "id": 4,
+        "title": "Need You Now",
+        "artist": "Lady A",
+        "audio":  "audio/audiolanguages/audious/watermelonsugar.mp3",
+        "image": "images/imageslanguages/imagesus/watermelonsugar.jpg",
+        "country": "US"
+    },
+    {
+        "id": 5,
+        "title": "Butter",
+        "artist": "BTS",
+        "audio":  "audio/audiolanguages/audiohan/butter.mp3",
+        "image": "images/imageslanguages/imageshan/butter.jpg",
+        "country": "Han"
+    },
+    {
+        "id": 6,
+        "title": "Ice Cream",
+        "artist": "Black Pink",
+        "audio":  "audio/audiolanguages/audiohan/icecream.mp3",
+        "image": "images/imageslanguages/imageshan/icecream.jpg",
+        "country": "Han"
+    },   
+    {
+        "id": 7,
+        "title": "Love Stick Girl",
+        "artist": "Black Pink",
+        "audio":  "audio/audiolanguages/audiohan/lovestickgirls.mp3",
+        "image": "images/imageslanguages/imageshan/lovestickgirls.jpg",
+        "country": "Han"
+    },
+    {
+        "id": 8,
+        "title": "Per Mission To Dence",
+        "artist": "BTS",
+        "audio":  "audio/audiolanguages/audiohan/permissiontodence.mp3",
+        "image": "images/imageslanguages/imageshan/permissiontodence.jpg",
+        "country": "Han"
+    },
+    {
+        "id": 9,
+        "title": "Moshi Moshi",
+        "artist": "Lady A",
+        "audio":  "audio/audiolanguages/audionhat/moshimoshi.mp3",
+        "image": "images/imageslanguages/imagesnhat/moshimoshi.jpg",
+        "country": "Nhat"
+    },
+    {
+        "id": 10,
+        "title": "Night Dance",
+        "artist": "asdfasdf",
+        "audio":  "audio/audiolanguages/audionhat/nightdanger.mp3",
+        "image": "images/imageslanguages/imagesnhat/nightdanger.jpg",
+        "country":"Nhat"
+    },
+    {
+        "id": 11,
+        "title": "Oto Noke",
+        "artist": "yamete",
+        "audio":  "audio/audiolanguages/audionhat/otonoke.mp3",
+        "image": "images/imageslanguages/imagesnhat/otonoke.jpg",
+        "country": "Nhat"
+    },
+    {
+        "id": 12,
+        "title": "Yoa Shobi",
+        "artist": "kimochi",
+        "audio":  "audio/audiolanguages/audionhat/yoasobi.mp3",
+        "image": "images/imageslanguages/imagesnhat/yoasobi.jpg",
+        "country": "Nhat"
+    },
+    {
+        "id": 13,
+        "title": "Giac Mong Xua",
+        "artist": "Hien Ho",
+        "audio":  "audio/audiolanguages/audiotrung/giacmongxua.mp3",
+        "image": "images/imageslanguages/imagestrung/giacmongxua.jpg",
+        "country": "Trung"
+    },
+    {
+        "id": 14,
+        "title": "Kiem Hon ",
+        "artist": "Jack 97",
+        "audio":  "audio/audiolanguages/audiotrung/kiemhon.mp3",
+        "image": "images/imageslanguages/imagestrung/kiemhon.jpg",
+        "country": "Trung"
+    },
+    {
+        "id": 15,
+        "title": "Hy Lan Nay Cao",
+        "artist": "Cai PaP",
+        "audio":  "audio/audiolanguages/audiotrung/halamnaycao.mp3",
+        "image": "images/imageslanguages/imagestrung/hylamnaycao.jpg",
+        "country": "Trung"
+    },
+    {
+        "id": 16,
+        "title": "Tat Nhat Lang Ruc Ro",
+        "artist": "Lady A",
+        "audio":  "audio/audiolanguages/audiotrung/tatnhatlangrucro.mp3",
+        "image": "images/imageslanguages/imagestrung/tatnhatlangrucro.jpg",
+        "country": "Trung"
+    }
+]
+  

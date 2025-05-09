@@ -1,118 +1,101 @@
 .page {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #111;
-  }
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    background: url('/images/background-dark.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 40px;
-    align-items: center;
-  }
-  
-  .heroImage img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .heroContent {
-    flex: 1;
-    margin-left: 40px;
-    max-width: 600px;
-  }
-  
-  .subheading {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .heading {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
-  .player {
-    background: #222;
-    padding: 16px;
-    border-radius: 8px;
-  }
-  
-  .songTitle {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  /* New Hits Section */
-  .newHits {
-    padding: 40px;
-    background: white;
-    color: black;
-  }
-  
-  .sectionTitle {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 6px;
-    margin-bottom: 24px;
-  }
-  
-  .songList {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .songItem {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 12px;
-  }
-  
-  .songImage {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  .songInfo {
-    flex-grow: 1;
-  }
-  
-  .songArtist {
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-  
-  .playButton {
-    background: #eee;
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .playButton:hover {
-    background: #ccc;
-  }
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+.hero {
+  background-color: #333;
+  color: white;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.heroImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.heroInfo {
+  max-width: 600px;
+}
+
+.audio {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.column {
+  background-color: #e7e7e7;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.categoryTitle {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.songCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.songImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.songInfo {
+  flex: 1;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.artist {
+  font-size: 12px;
+  color: #555;
+}
+
+.songAudio {
+  width: 30px;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: #e7e7e7;
+  padding: 20px;
+  border-radius: 10px;
+}

@@ -83,15 +83,16 @@ const TrendingPage = () => {
         <div
           className={styles.progress}
           data-progress={item.id}
-          style={{
-            width: `$ {
-              audioRefs.current[item.id]?.currentTime &&
-              audioRefs.current[item.id].duration
-                ? (audioRefs.current[item.id].currentTime /
-                    audioRefs.current[item.id].duration) * 100
-                : 0
-            }%`,
-          }}
+        style={{
+          width: `${
+            audioRefs.current[item.id]?.currentTime &&
+            audioRefs.current[item.id].duration
+              ? (audioRefs.current[item.id].currentTime /
+                  audioRefs.current[item.id].duration) * 100
+              : 0
+          }%`,
+        }}
+
         />
       </div>
       <button

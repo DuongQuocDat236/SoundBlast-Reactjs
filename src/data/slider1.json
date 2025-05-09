@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Waiting for Love",
+      "artist": "Avicii",
+      "audio": "/audio/audiotrending1/atmyworst.mp3",
+      "image": "/images/audiotrending/atmyworst.jpg",
+      "description": "A powerful electronic hit from Avicii about hope and love."
+    },
+    {
+      "id": 2,
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "audio": "/audio/audiotrending1/deatheded.mp3",
+      "image": "/image/imagestrending/deatheded.jpg",
+      "description": "Retro vibes with modern synth from The Weeknd."
+    },
+    {
+      "id": 3,
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "audio": "/audio/audiotrending1/doubletake.mp3",
+      "image": "/images/imagestrending/doubletake.jpg",
+      "description": "A chart-topping pop hit with catchy rhythms."
+    }
+  ]
+  
