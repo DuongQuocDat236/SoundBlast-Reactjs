@@ -18,7 +18,9 @@ const OldSongs = () => {
       <ul className="list-group">
         {songs.map((song) => (
           <li key={song.id} className="list-group-item">
-            <strong>{song.title}</strong> – {song.artist}
+          <p className="text-truncate" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {song.title}
+          </p> – {song.artist}
           </li>
         ))}
       </ul>
