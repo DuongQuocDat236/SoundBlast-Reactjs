@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "image": "images/imageslanguages/imagesus/butter.jpg",
+        "audio": "audio/audiolanguages/audious/butter.mp3",
+        "title": "Butter",
+        "artist": "BTS"
+    },
+    {
+        "id": 2,
+        "image": "images/imageslanguages/imagesus/icecream.jpg",
+        "audio": "audio/audiolanguages/audious/icecream.mp3",
+        "title": "Ice Cream",
+        "artist": "BlackPink"
+    },
+    {
+        "id": 3,
+        "image": "images/imageslanguages/imagesus/lovestickgirls.jpg",
+        "audio": "audio/audiolanguages/audious/lovestickgirls.mp3",
+        "title": "Loves Tick Girls",
+        "artist": "BlackPink"
+    },
+    {
+        "id": 4,
+        "image": "images/imageslanguages/imagesus/permissiontodence.jpg",
+        "audio": "audio/audiolanguages/audious/permissiontodence.mp3",
+        "title": "Permisstion To Dance",
+        "artist": "BTS"
+    }
+]

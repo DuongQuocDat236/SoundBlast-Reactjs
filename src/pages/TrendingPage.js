@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "./TrendingPage.module.css";
+import { FaPlay, FaPause } from "react-icons/fa";
 
 import hotNhacVietData from "../data/Datatrending/Hotnhacviet.json";
 import nhacAuMyData from "../data/Datatrending/Nhacaumy.json";
@@ -7,6 +8,107 @@ import topNhacAuMyData from "../data/Datatrending/Topnhacaumy.json";
 import topNhacVietData from "../data/Datatrending/Topnhacviet.json";
 
 const TrendingPage = () => {
+  const [activeAudio, setActiveAudio] = useState(null);
+  const audioRefs = useRef({});
+
+  const handlePlay = (id) => {
+    const currentAudio = audioRefs.current[id];
+    if (activeAudio && activeAudio !== id) {
+      const prevAudio = audioRefs.current[activeAudio];
+      prevAudio?.pause();
+      prevAudio.currentTime = 0;
+    }
+
+    if (currentAudio?.paused) {
+      currentAudio.play();
+      setActiveAudio(id);
+    } else {
+      currentAudio?.pause();
+      setActiveAudio(null);
+    }
+  };
+
+  const handleTimeUpdate = (id) => {
+    const audio = audioRefs.current[id];
+    if (audio) {
+      const currentTime = Math.floor(audio.currentTime);
+      const progressBars = document.querySelectorAll(`[data-progress="${id}"]`);
+      progressBars.forEach((bar) => {
+        const progress = (currentTime / (audio.duration || 1)) * 100;
+        bar.style.width = `${progress}%`;
+      });
+    }
+  };
+
+  const handleProgressClick = (e, id) => {
+    const audio = audioRefs.current[id];
+    if (audio) {
+      const rect = e.target.getBoundingClientRect();
+      const percent = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = percent * audio.duration;
+    }
+  };
+
+  const handleRewind = (id) => {
+    const audio = audioRefs.current[id];
+    if (audio) {
+      audio.currentTime = Math.max(0, audio.currentTime - 10);
+    }
+  };
+
+  const formatTime = (sec = 0) => {
+    const minutes = Math.floor(sec / 60);
+    const seconds = Math.floor(sec % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+
+  const renderAudioPlayer = (item) => (
+    <div className={styles.audioContainer}>
+      <button
+        onClick={() => handlePlay(item.id)}
+        className={styles.playButton}
+        aria-label={audioRefs.current[item.id]?.paused ? "Play" : "Pause"}
+      >
+        {audioRefs.current[item.id]?.paused ? <FaPlay /> : <FaPause />}
+      </button>
+      <div className={styles.trackInfo}>{item.title}</div>
+      <div className={styles.time}>
+        <span>{formatTime(audioRefs.current[item.id]?.currentTime || 0)}</span>
+        <span>{formatTime(item.duration || 0)}</span>
+      </div>
+      <div
+        className={styles.progressBar}
+        onClick={(e) => handleProgressClick(e, item.id)}
+      >
+        <div
+          className={styles.progress}
+          data-progress={item.id}
+          style={{
+            width: `$ {
+              audioRefs.current[item.id]?.currentTime &&
+              audioRefs.current[item.id].duration
+                ? (audioRefs.current[item.id].currentTime /
+                    audioRefs.current[item.id].duration) * 100
+                : 0
+            }%`,
+          }}
+        />
+      </div>
+      <button
+        onClick={() => handleRewind(item.id)}
+        className={styles.rewindButton}
+        aria-label="Rewind 10 seconds"
+      >
+        &lt;
+      </button>
+      <audio
+        ref={(el) => (audioRefs.current[item.id] = el)}
+        src={`/${item.audio}`}
+        onTimeUpdate={() => handleTimeUpdate(item.id)}
+      />
+    </div>
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.row}>
@@ -20,10 +122,7 @@ const TrendingPage = () => {
                   <img src={`/${item.cover}`} alt={item.title} />
                   <p className={styles.title}>{item.title}</p>
                   <p className={styles.artist}>{item.artist}</p>
-                  <audio controls className={styles.audioPlayerItem}>
-                    <source src={`/${item.audio}`} type="audio/mpeg" />
-                    Trình duyệt của bạn không hỗ trợ audio.
-                  </audio>
+                  {renderAudioPlayer(item)}
                 </div>
               ))}
             </div>
@@ -47,10 +146,7 @@ const TrendingPage = () => {
                       <p className={styles.songArtist}>{song.artist}</p>
                     </div>
                   </div>
-                  <audio controls className={styles.audioPlayerItem}>
-                    <source src={`/${song.audio}`} type="audio/mpeg" />
-                    Trình duyệt của bạn không hỗ trợ audio.
-                  </audio>
+                  {renderAudioPlayer(song)}
                 </div>
               ))}
             </div>
@@ -68,10 +164,7 @@ const TrendingPage = () => {
                   <img src={`/${item.cover}`} alt={item.title} />
                   <p className={styles.title}>{item.title}</p>
                   <p className={styles.artist}>{item.artist}</p>
-                  <audio controls className={styles.audioPlayerItem}>
-                    <source src={`/${item.audio}`} type="audio/mp3" />
-                    Trình duyệt của bạn không hỗ trợ audio.
-                  </audio>
+                  {renderAudioPlayer(item)}
                 </div>
               ))}
             </div>
@@ -95,10 +188,7 @@ const TrendingPage = () => {
                       <p className={styles.songArtist}>{song.artist}</p>
                     </div>
                   </div>
-                  <audio controls className={styles.audioPlayerItem}>
-                    <source src={`/${song.audio}`} type="audio/mpeg" />
-                    Trình duyệt của bạn không hỗ trợ audio.
-                  </audio>
+                  {renderAudioPlayer(song)}
                 </div>
               ))}
             </div>
