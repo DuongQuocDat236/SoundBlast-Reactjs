@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './LanguagesPage.module.css';
 import songsData from '../data/languagespage.json';
 
 const LanguagesPage = () => {
+  const [playingId, setPlayingId] = useState(null);
+  const audioRef = useRef(new Audio());
+
+  const handlePlayPause = (song) => {
+    if (playingId === song.id) {
+      audioRef.current.pause();
+      setPlayingId(null);
+    } else {
+      audioRef.current.src = song.audio;
+      audioRef.current.play();
+      setPlayingId(song.id);
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      // Tắt nhạc khi rời trang
+      audioRef.current.pause();
+      audioRef.current.src = '';
+    };
+  }, []);
+
   const heroSong = songsData[0];
   const categories = ['Trung', 'Han', 'Nhat', 'US'];
   const getSongsByCountry = (country) =>
@@ -10,7 +32,6 @@ const LanguagesPage = () => {
 
   return (
     <div className={styles.page}>
-      {/* Hero section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <img src={heroSong.image} alt={heroSong.title} className={styles.heroImage} />
@@ -22,7 +43,6 @@ const LanguagesPage = () => {
         </div>
       </section>
 
-      {/* Song Grid in 2 rows, 2 columns each */}
       <section className={styles.grid}>
         {[0, 1].map((rowIdx) => (
           <div key={rowIdx} className={styles.row}>
@@ -36,9 +56,13 @@ const LanguagesPage = () => {
                       <p className={styles.title}>{song.title}</p>
                       <p className={styles.artist}>{song.artist}</p>
                     </div>
-                    <audio controls className={styles.songAudio}>
-                      <source src={song.audio} type="audio/mp3" />
-                    </audio>
+
+                    <button
+                      className={`${styles.playButton} ${playingId === song.id ? styles.pause : styles.play}`}
+                      onClick={() => handlePlayPause(song)}
+                    >
+                      {playingId === song.id ? '⏸' : '▶️'}
+                    </button>
                   </div>
                 ))}
               </div>

@@ -1,0 +1,129 @@
+[
+    {
+    "id": 1,
+    "fullName": "Nguyễn Thanh Tùng",
+    "stageName": "Sơn Tùng M-TP",
+    "birthDate": "1994-07-05",
+    "age": 30,
+    "avatar": "images/genres/avatasontung.jpg",
+    "latestSong": {
+        "title": "ĐỪNG LÀM TRÁI TIM ANH ĐAU",
+        "videoUrl": "https://www.youtube.com/watch?v=knW7-x7Y7RE",
+        "thumbnail": "images/genres/haytraochoanh.jpg",
+        "releaseDate": "2024-06-08"
+    },
+    "playlist": {
+        "title": "Những bài hát hay nhất của Sơn Tùng",
+        "platform": "Zing MP3",
+        "image": ""
+    },
+    "gallery": [
+        "images/genres/sontung1.jpg",
+        "images/genres/sontung2.jpg",
+        "images/genres/sontung3.jpg",
+        "images/genres/sontung4.jpg"
+    ]
+    },
+        {
+    "id": 1,
+    "fullName": "Nguyễn Thanh Tùng",
+    "stageName": "Sơn Tùng M-TP",
+    "birthDate": "1994-07-05",
+    "age": 30,
+    "avatar": "path/to/son-tung.jpg",
+    "latestSong": {
+        "title": "ĐỪNG LÀM TRÁI TIM ANH ĐAU",
+        "videoUrl": "https://www.youtube.com/watch?v=XXXX",
+        "thumbnail": "path/to/video-thumbnail.jpg",
+        "releaseDate": "2024-06-08"
+    },
+    "playlist": {
+        "title": "Những bài hát hay nhất của Sơn Tùng",
+        "platform": "Zing MP3",
+        "image": "path/to/zing-playlist.jpg"
+    },
+    "gallery": [
+        "path/to/image1.jpg",
+        "path/to/image2.jpg",
+        "path/to/image3.jpg",
+        "path/to/image4.jpg"
+    ]
+    },
+    {
+    "id": 1,
+    "fullName": "Nguyễn Thanh Tùng",
+    "stageName": "Sơn Tùng M-TP",
+    "birthDate": "1994-07-05",
+    "age": 30,
+    "avatar": "path/to/son-tung.jpg",
+    "latestSong": {
+        "title": "ĐỪNG LÀM TRÁI TIM ANH ĐAU",
+        "videoUrl": "https://www.youtube.com/watch?v=XXXX",
+        "thumbnail": "path/to/video-thumbnail.jpg",
+        "releaseDate": "2024-06-08"
+    },
+    "playlist": {
+        "title": "Những bài hát hay nhất của Sơn Tùng",
+        "platform": "Zing MP3",
+        "image": "path/to/zing-playlist.jpg"
+    },
+    "gallery": [
+        "path/to/image1.jpg",
+        "path/to/image2.jpg",
+        "path/to/image3.jpg",
+        "path/to/image4.jpg"
+    ]
+    },
+    {
+    "id": 1,
+    "fullName": "Nguyễn Thanh Tùng",
+    "stageName": "Sơn Tùng M-TP",
+    "birthDate": "1994-07-05",
+    "age": 30,
+    "avatar": "path/to/son-tung.jpg",
+    "latestSong": {
+        "title": "ĐỪNG LÀM TRÁI TIM ANH ĐAU",
+        "videoUrl": "https://www.youtube.com/watch?v=XXXX",
+        "thumbnail": "path/to/video-thumbnail.jpg",
+        "releaseDate": "2024-06-08"
+    },
+    "playlist": {
+        "title": "Những bài hát hay nhất của Sơn Tùng",
+        "platform": "Zing MP3",
+        "image": "path/to/zing-playlist.jpg"
+    },
+    "gallery": [
+        "path/to/image1.jpg",
+        "path/to/image2.jpg",
+        "path/to/image3.jpg",
+        "path/to/image4.jpg"
+    ]
+    },
+    {
+    "id": 1,
+    "fullName": "Nguyễn Thanh Tùng",
+    "stageName": "Sơn Tùng M-TP",
+    "birthDate": "1994-07-05",
+    "age": 30,
+    "avatar": "path/to/son-tung.jpg",
+    "latestSong": {
+        "title": "ĐỪNG LÀM TRÁI TIM ANH ĐAU",
+        "videoUrl": "https://www.youtube.com/watch?v=XXXX",
+        "thumbnail": "path/to/video-thumbnail.jpg",
+        "releaseDate": "2024-06-08"
+    },
+    "playlist": {
+        "title": "Những bài hát hay nhất của Sơn Tùng",
+        "platform": "Zing MP3",
+        "image": "path/to/zing-playlist.jpg"
+    },
+    "gallery": [
+        "path/to/image1.jpg",
+        "path/to/image2.jpg",
+        "path/to/image3.jpg",
+        "path/to/image4.jpg"
+    ]
+    }
+
+ 
+]
