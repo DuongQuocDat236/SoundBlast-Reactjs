@@ -22,7 +22,7 @@ const TrendingNow = () => {
 
   return (
     <Container className="py-4 text-center">
-      <h2 className="mb-4">🔥 Trending Now</h2>
+      <h2 className="mb-4 fw-bold">🔥 TRENDING NOW</h2>
 
       {loading ? (
         <Spinner animation="border" variant="primary" />
