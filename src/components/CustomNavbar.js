@@ -35,7 +35,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
     <BootstrapNavbar
       expand="lg"
       className="shadow-sm py-2"
-      style={{ backgroundColor: "#e5e4db" }} // Màu nền navbar là #e5e4db
+      style={{ background: "linear-gradient(90deg, #7b2cbf, #5ac8fa)"}} 
     >
       <Container fluid className="px-4">
         {/* Logo */}
@@ -50,7 +50,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             height="40"
             className="rounded-circle"
           />
-          <span className="fw-bold fs-5">SoundBlast</span>
+          <span className="fw-bold text-black fs-5">SoundBlast</span>
         </BootstrapNavbar.Brand>
 
         <BootstrapNavbar.Toggle aria-controls="main-navbar-nav" />
@@ -64,7 +64,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             <Nav.Link as={Link} to="/trending" eventKey="/trending">Trending</Nav.Link>
             <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts">TopCharts</Nav.Link>
             <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases">New Releases</Nav.Link>
-            <NavDropdown title="More" id="more-dropdown">
+            <NavDropdown title="..." id="more-dropdown">
               <NavDropdown.Item as={Link} to="/genres">Genres</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/languages">Languages</NavDropdown.Item>

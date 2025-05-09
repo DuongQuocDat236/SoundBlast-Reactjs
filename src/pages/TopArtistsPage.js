@@ -4,6 +4,7 @@ import hotsearch from "../data/Datatopartists/hotsearch.json";
 import latest from "../data/Datatopartists/Latest.json";
 import searchhits from "../data/Datatopartists/Searchhits.json";
 import styles from './TopArtistsPage.module.css';
+import favourite from "../data/Datatopartists/favourite.json";
 
 const Section = ({ title, data, onPlay, currentAudio, audioRefs, progresses, durations }) => (
   <div className={styles.section}>
