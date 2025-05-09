@@ -10,6 +10,7 @@
     "aos": "^2.3.4",
     "axios": "^1.8.4",
     "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.12.1",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.9",
     "react-bootstrap-icons": "^1.11.5",

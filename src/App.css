@@ -1,6 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 body {
-  background-color: #E5E4DB;
+  background-color: #f8f8f5;
   margin: 0;
   min-height: 100vh;
 }
@@ -83,5 +84,19 @@ body {
     font-weight: bold;
     text-align: center;
   }
+  .dropdown-menu {
+    background-color: #8a0a7f; 
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
   
+  .dropdown-menu .dropdown-item {
+    color: #ffffff;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #2a2a2e; 
+    color: #00ffff;
+  }
 

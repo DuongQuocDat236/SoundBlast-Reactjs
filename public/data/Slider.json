@@ -1,20 +1,20 @@
 [
     {
       "id": 1,
-      "title": "Send It",
-      "description": "AUSIN MAHONE ft. RICH HOMIE QUAN",
+      "title": "Are You Ready ?",
+      "description": "Welcom To SoundBlast",
       "image": "/images/Slider/SendIt.jpg"
     },
     {
       "id": 2,
-      "title": "That Girls",
-      "description": "OLLY MURS",
+      "title": "Feel the heart beats",
+      "description": "SOUNDBLAST.COM",
       "image": "/images/Slider/ThatGirl.jpg"
     },
     {
       "id": 3,
-      "title": "Bắc Bling",
-      "description": "HÒA MINZY ft NS XUÂN HINH x MASEW x TUẤN CRY",
+      "title": "Enjoy The Magic Of Music",
+      "description": "COME WITH US",
       "image": "/images/Slider/BacBling.jpg"
     }
   ]

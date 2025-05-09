@@ -2,40 +2,41 @@ import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "./Slider.css";
 
-const Slider = () => {
+const GallerySlider = () => {
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
     fetch("data/Slider.json")
       .then((res) => res.json())
       .then((data) => setSlides(data))
-      .catch((err) => console.error("Error loading slider:", err));
+      .catch((err) => console.error("Error load slider:", err));
   }, []);
 
   return (
-    <section className="slider-wrapper position-relative">
-      <Carousel fade interval={4000} pause={false} controls={false} indicators={false}>
+    <div className="slider-container">
+      <Carousel fade controls={false} indicators={false} interval={4000}>
         {slides.map((slide) => (
-          <Carousel.Item key={slide.id} className="slider-item">
+          <Carousel.Item key={slide.id}>
             <img
-              src={slide.image}
               className="d-block w-100 slider-img"
+              src={slide.image}
               alt={slide.title}
             />
-            <div className="slider-caption text-white text-center">
-              <p className="slider-sub">{slide.subtitle || "NEW SINGLE"}</p>
-              <h1 className="slider-title">{slide.title}</h1>
-              <p className="slider-desc">{slide.description}</p>
+            <div className="carousel-overlay">
+
+              <h1 className="title">{slide.title}</h1>
+              <p className="artist">{slide.description}</p>
             </div>
           </Carousel.Item>
         ))}
       </Carousel>
 
-      <a href="#main-sections" className="scroll-down text-white">
-        <i className="bi bi-chevron-down fs-2"></i>
+      {/* Animated down arrow */}
+      <a href="#main" className="scroll-down">
+        <i className="bi bi-chevron-down fs-1"></i>
       </a>
-    </section>
+    </div>
   );
 };
 
-export default Slider;
+export default GallerySlider;

@@ -71,9 +71,15 @@ const Footer = () => {
               <button type="submit" className="btn btn-info w-100">Subscribe</button>
             </form>
             <div className="mt-4">
-              <a href="#"><FaFacebook className="text-info mx-2" size={20} /></a>
-              <a href="#"><FaTwitter className="text-info mx-2" size={20} /></a>
-              <a href="#"><FaInstagram className="text-info mx-2" size={20} /></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                  <FaFacebook className="text-info mx-2" size={20} />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                  <FaTwitter className="text-info mx-2" size={20} />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram className="text-info mx-2" size={20} />
+                </a>
             </div>
           </div>
 

@@ -30,6 +30,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import SearchResultPage from "./components/SearchResultPage";
 import './App.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);

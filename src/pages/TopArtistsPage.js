@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef} from 'react';
 import favourite from "../data/Datatopartists/favourite.json";
 import hotsearch from "../data/Datatopartists/hotsearch.json";
 import latest from "../data/Datatopartists/Latest.json";
