@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
+import "./CustomNavbar.css"; 
 
 const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
   const [visitors, setVisitors] = useState(0);
@@ -25,6 +26,20 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
     }
   }, []);
 
+  // 👇 Add blur on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector(".custom-navbar");
+      if (window.scrollY > 30) {
+        nav.classList.add("navbar-blur");
+      } else {
+        nav.classList.remove("navbar-blur");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
@@ -34,14 +49,14 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
   return (
     <BootstrapNavbar
       expand="lg"
-      className="shadow-sm py-2"
-      style={{ background: "linear-gradient(90deg, #7b2cbf, #5ac8fa)"}} 
+      className="custom-navbar shadow-sm py-2"
+      style={{ background: "linear-gradient(90deg, #7b2cbf, #5ac8fa)" }}
     >
-      <Container fluid className="px-4">
-        {/* Logo */}
+      <Container fluid className="px-4 d-flex align-items-center">
         <BootstrapNavbar.Brand
-          href="/"
-          className="d-flex align-items-center gap-2 me-3"
+          as={Link}
+          to="/"
+          className="d-flex align-items-center gap-2"
         >
           <img
             alt="Logo"
@@ -50,21 +65,28 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             height="40"
             className="rounded-circle"
           />
-          <span className="fw-bold text-black fs-5">SoundBlast</span>
+          <span className="fw-bold text-black" style={{ fontSize: "1.7rem" }}>
+            SoundBlast
+          </span>
         </BootstrapNavbar.Brand>
 
         <BootstrapNavbar.Toggle aria-controls="main-navbar-nav" />
-        <BootstrapNavbar.Collapse id="main-navbar-nav">
-          {/* Navigation */}
+        <BootstrapNavbar.Collapse id="main-navbar-nav" className="d-flex align-items-center">
           <Nav
-            className="me-auto d-flex align-items-center gap-3 text-uppercase fw-semibold"
+            className="flex-grow-1 d-flex align-items-center gap-3 ms-4"
             activeKey={activeMenu}
             onSelect={(selectedKey) => setActiveMenu(selectedKey)}
           >
-            <Nav.Link as={Link} to="/trending" eventKey="/trending">Trending</Nav.Link>
-            <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts">TopCharts</Nav.Link>
-            <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases">New Releases</Nav.Link>
-            <NavDropdown title="..." id="more-dropdown">
+            <Nav.Link as={Link} to="/trending" eventKey="/trending" className="nav-link-custom text-white small">
+              Trending
+            </Nav.Link>
+            <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts" className="nav-link-custom text-white small">
+              TopCharts
+            </Nav.Link>
+            <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-white small">
+              New Releases
+            </Nav.Link>
+            <NavDropdown title="..." id="more-dropdown" className="small">
               <NavDropdown.Item as={Link} to="/genres">Genres</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/languages">Languages</NavDropdown.Item>
@@ -77,24 +99,16 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             </NavDropdown>
           </Nav>
 
-          {/* RIGHT SECTION: Search + Theme + Visitors + Auth */}
           <div className="d-flex align-items-center gap-3 ms-auto">
-            {/* Search */}
-            <div>
-              <SearchBar />
-            </div>
-            {/* Theme Toggle */}
+            <SearchBar />
             <div onClick={toggleTheme} role="button" title="Toggle theme" className="ms-2">
               {isDarkMode ? "🌞" : "🌙"}
             </div>
-
-            {/* Online Users */}
-            <div className="d-flex align-items-center small">
+            <div className="d-flex align-items-center small text-white">
               <span className="me-1">👥</span>
               <span>{visitors} online</span>
             </div>
 
-            {/* Auth Section */}
             {user ? (
               <NavDropdown
                 title={
@@ -114,7 +128,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <div className="d-flex gap-2">    
+              <div className="d-flex gap-2">
                 <Button size="sm" variant="light">
                   <Link className="nav-link text-black" to="/login">Login</Link>
                 </Button>
@@ -129,4 +143,5 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
     </BootstrapNavbar>
   );
 };
+
 export default CustomNavbar;

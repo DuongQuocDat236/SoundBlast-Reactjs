@@ -1,0 +1,33 @@
+/* Smooth background transition */
+.custom-navbar {
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+  }
+  
+  /* Blur effect when scrolling */
+  .navbar-blur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(123, 44, 191, 0.8) !important;
+  }
+  
+  /* Hover underline */
+  .nav-link-custom {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link-custom::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link-custom:hover::after {
+    width: 100%;
+  }
+  
