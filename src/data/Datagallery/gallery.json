@@ -1,0 +1,129 @@
+[
+    {
+      "id": 1,
+      "fullName": "Nguyễn Thanh Tùng",
+      "stageName": "Sơn Tùng M-TP",
+      "birthDate": "1994-07-05",
+      "age": 30,
+      "avatar": "images/gallery/avatasontung.jpg",
+      "latestSong": {
+        "title": "HÃY TRAO CHO ANH",
+        "videoUrl": "https://www.youtube.com/watch?v=knW7-x7Y7RE",
+        "thumbnail": "images/gallery/haytraochoanh.jpg",
+        "releaseDate": "2024-06-08"
+      },
+      "playlist": {
+        "title": "Những bài hát hay nhất của Sơn Tùng",
+        "platform": "Zing MP3",
+        "image": "images/gallery/haytraochoanh.jpg"
+      },
+      "gallery": [
+        "images/gallery/sontung1.jpg",
+        "images/gallery/sontung2.jpg",
+        "images/gallery/sontung3.jpg",
+        "images/gallery/sontung4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "fullName": "Hà Anh Tuấn",
+      "stageName": "Người của công chúng",
+      "birthDate": "1984-12-17",
+      "age": 40,
+      "avatar": "images/gallery/avatahaanhtuan.jpg",
+      "latestSong": {
+        "title": "Tháng tư là lời nói dối của em",
+        "videoUrl": "https://www.youtube.com/watch?v=UCXao7aTDQM",
+        "thumbnail": "images/gallery/thangtulaloinoidoicuaem.jpg",
+        "releaseDate": "2024-06-08"
+      },
+      "playlist": {
+        "title": "Bài hát nổi bật của Hà Anh Tuấn",
+        "platform": "Zing MP3",
+        "image": "images/gallery/thangtulaloinoidoicuaem.jpg"
+      },
+      "gallery": [
+        "images/gallery/haanhtuan1.jpg",
+        "images/gallery/haanhtuan2.jpg",
+        "images/gallery/haanhtuan3.jpg",
+        "images/gallery/haanhtuan4.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "fullName": "Justin Bieber",
+      "stageName": "Justin Drew Bieber",
+      "birthDate": "1994-03-01",
+      "age": 31,
+      "avatar": "images/gallery/avatajustinbieber.jpg",
+      "latestSong": {
+        "title": "Justin Bieber - Baby ft. Ludacris",
+        "videoUrl": "https://www.youtube.com/watch?v=kffacxfA7G4",
+        "thumbnail": "images/gallery/baby.jpg",
+        "releaseDate": "2015-06-08"
+      },
+      "playlist": {
+        "title": "Hot music Justin Bieber",
+        "platform": "Zing MP3",
+        "image": "images/gallery/baby.jpg"
+      },
+      "gallery": [
+        "images/gallery/justinbieber1.jpg",
+        "images/gallery/justinbieber2.jpg",
+        "images/gallery/justinbieber3.jpg",
+        "images/gallery/justinbieber4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "fullName": "Bruno Mars",
+      "stageName": "Peter Gene Hernandez",
+      "birthDate": "1985-10-06",
+      "age": 39,
+      "avatar": "images/gallery/avatabrunomars.jpg",
+      "latestSong": {
+        "title": "Lady Gaga, Bruno Mars - Die With A Smile",
+        "videoUrl": "https://www.youtube.com/watch?v=kPa7bsKwL-c",
+        "thumbnail": "images/gallery/diewithasmile.jpg",
+        "releaseDate": "2019-06-08"
+      },
+      "playlist": {
+        "title": null,
+        "platform": "Zing MP3",
+        "image": null
+      },
+      "gallery": [
+        "images/gallery/BrunoMast1.jpg",
+        "images/gallery/BrunoMars2.jpg",
+        "images/gallery/BrunoMars3.jpg",
+        "images/gallery/BrunoMars4.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "fullName": "Ariana Grande",
+      "stageName": "Ariana Grande-Butera",
+      "birthDate": "1993-06-26",
+      "age": 31,
+      "avatar": "images/gallery/avataarianagrande.jpg",
+      "latestSong": {
+        "title": null,
+        "videoUrl": "https://www.youtube.com/watch?v=ztotaQ79eek",
+        "thumbnail": "images/gallery/intro.jpg",
+        "releaseDate": "2025-03-28"
+      },
+      "playlist": {
+        "title": null,
+        "platform": "Zing MP3",
+        "image": "images/gallery/intro.jpg"
+      },
+      "gallery": [
+        "images/gallery/ArianaGrande1.jpg",
+        "images/gallery/ArianaGrande2.jpg",
+        "images/gallery/ArianaGrande3.jpg",
+        "images/gallery/ArianaGrande4.jpg"
+      ]
+    }
+    
+  ]
+  
