@@ -26,7 +26,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
     }
   }, []);
 
-  // 👇 Add blur on scroll
+  // Add blur on scroll
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.querySelector(".custom-navbar");
@@ -86,7 +86,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-white small">
               New Releases
             </Nav.Link>
-            <NavDropdown title="..." id="more-dropdown" className="small">
+            <NavDropdown title="More" id="more-dropdown" className="small">
               <NavDropdown.Item as={Link} to="/genres">Genres</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/languages">Languages</NavDropdown.Item>

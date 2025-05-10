@@ -41,8 +41,8 @@ const Footer = () => {
           <div className="col-md-3 mb-4">
             <h6 className="fw-bold mb-3 text-center">Contact</h6>
             <p className="small mb-1">📍 Tầng 1 - Tòa nhà Detech- Số 8 Đường Tôn Thất Thuyết - Phường Mỹ Đình 2 - Quận Nam Từ Liêm - Hà Nội</p>
-            <p className="small mb-1">☎️ +1 (800) 123-4567</p>
-            <p className="small mb-0">📧 support@soundblast.com</p>
+            <p className="small mb-1">☎️ (+84) 2459875698 </p>
+            <p className="small mb-0">📧 Email : support@soundblast.com</p>
           </div>
 
           {/* Column 2: Social + Newsletter */}

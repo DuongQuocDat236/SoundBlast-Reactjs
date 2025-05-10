@@ -13,14 +13,14 @@ const OldSongs = () => {
 
   return (
     <section id="oldsongs" className="my-5 px-3">
-      <h2 className="mb-4 text-center fw-bold">🎼 OLD SONGS</h2>
-
+      <h2 className="mb-4 fw-bold text-center">🎼 OLD SONGS</h2>
       <ul className="list-group">
-        {songs.map((song) => (
+        {songs.map((song, index) => (
           <li key={song.id} className="list-group-item">
-          <p className="text-truncate" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {song.title}
-          </p> – {song.artist}
+            <p className="mb-1 fw-semibold small">
+              {index + 1}. {song.title}
+            </p>
+            <p className="mb-0 text-muted small">{song.artist}</p>
           </li>
         ))}
       </ul>
@@ -29,6 +29,3 @@ const OldSongs = () => {
 };
 
 export default OldSongs;
-
-
-

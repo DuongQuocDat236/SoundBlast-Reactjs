@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CustomAudioCard from "../CustomAudioCard"; // Cập nhật path nếu cần
+import CustomAudioCard from "../CustomAudioCard";
 
-const NewReleases = () => {
+const NewReleases = ({ onPlay, currentSong }) => {
   const [releases, setReleases] = useState([]);
 
   useEffect(() => {
@@ -19,10 +19,21 @@ const NewReleases = () => {
         {releases.map((song) => (
           <div className="col" key={song.id}>
             <CustomAudioCard
+              id={song.id}
               image={`http://localhost:8000/${song.image}`}
               title={song.title}
               artist={song.artist}
-              audioSrc={`http://localhost:8000/${song.audio}`}
+              audioSrc={`http://localhost:8000/api/stream-audio/${song.audio}`}
+              onPlay={() =>
+                onPlay({
+                  id: song.id,
+                  title: song.title,
+                  artist: song.artist,
+                  audioSrc: `http://localhost:8000/api/stream-audio/${song.audio}`,
+                  image: `http://localhost:8000/${song.image}`,
+                })
+              }
+              currentSong={currentSong}
             />
           </div>
         ))}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CustomAudioCard from "../CustomAudioCard";
 
-const TopCharts = () => {
+const TopCharts = ({ onPlay, currentSong }) => {
   const [charts, setCharts] = useState([]);
 
   useEffect(() => {
@@ -19,10 +19,21 @@ const TopCharts = () => {
         {charts.map((song) => (
           <div className="col" key={song.id}>
             <CustomAudioCard
+              id={song.id}
               image={`http://localhost:8000/${song.image}`}
               title={song.title}
               artist={song.artist}
-              audioSrc={`http://localhost:8000/${song.audio}`}
+              audioSrc={`http://localhost:8000/api/stream-audio/${song.audio}`}
+              onPlay={() =>
+                onPlay({
+                  id: song.id,
+                  title: song.title,
+                  artist: song.artist,
+                  audioSrc: `http://localhost:8000/api/stream-audio/${song.audio}`,
+                  image: `http://localhost:8000/${song.image}`,
+                })
+              }
+              currentSong={currentSong}
             />
           </div>
         ))}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/MainLayout";
 import MainContent from "./components/MainContent";
@@ -31,22 +31,32 @@ import 'aos/dist/aos.css';
 import SearchResultPage from "./components/SearchResultPage";
 import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import BottomMusicPlayer from "./components/BottomMusicPlayer";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [currentSong, setCurrentSong] = useState(null);
+
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
-  }, [])
+  }, []);
+
+  const handlePlay = (song) => {
+    setCurrentSong(song);
+  };
 
   return (
     <div>
       <Router>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><MainContent /></MainLayout>} />
+          <Route path="/" element={
+            <MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode} currentSong={currentSong} onClose={() => setCurrentSong(null)}>
+              <MainContent onPlay={handlePlay} currentSong={currentSong} />
+            </MainLayout>} 
+          />
           <Route path="/search" element={<SearchResultPage />} />
           <Route path="/song/:id" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><SongPage /></MainLayout>} />
           <Route path="/trending" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><TrendingPage /></MainLayout>} />
@@ -70,6 +80,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPasswordForm />} />
           <Route path="/reset-password" element={<ResetPasswordForm />} />
         </Routes>
+        {currentSong && <BottomMusicPlayer song={currentSong} onClose={() => setCurrentSong(null)} />}
       </Router>
     </div>
   );

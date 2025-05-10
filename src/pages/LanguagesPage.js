@@ -18,13 +18,13 @@ const LanguagesPage = () => {
   };
 
   useEffect(() => {
-    return () => {
-      // Tắt nhạc khi rời trang
-      audioRef.current.pause();
-      audioRef.current.src = '';
-    };
-  }, []);
+  const currentAudio = audioRef.current;
 
+  return () => {
+    currentAudio.pause();
+    currentAudio.src = '';
+  };
+}, []);
   const heroSong = songsData[0];
   const categories = ['Trung', 'Han', 'Nhat', 'US'];
   const getSongsByCountry = (country) =>

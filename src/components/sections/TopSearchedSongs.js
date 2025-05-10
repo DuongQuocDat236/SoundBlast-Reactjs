@@ -13,7 +13,7 @@ const TopSearchedSongs = () => {
 
   return (
     <section id="topsearchedsongs" className="my-5 px-3">
-      <h2 className="mb-4 text-center fw-bold">🔍 TOP SEARCHED SONGS</h2>
+      <h2 className="mb-4 text-center fw-bold">🔍 TOP SEARCHED</h2>
 
       <ul className="list-group">
         {songs.map((song) => (

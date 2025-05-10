@@ -4,8 +4,9 @@ import GallerySlider from './Slider';
 import CustomNavbar from './CustomNavbar';
 import Footer from './Footer';
 import { Container } from "react-bootstrap";
+import BottomMusicPlayer from "./BottomMusicPlayer";
 
-const MainLayout = ({ children, toggleTheme, isDarkMode }) => {
+const MainLayout = ({ children, toggleTheme, isDarkMode, currentSong, onClose }) => {
   const location = useLocation();
   const backgroundColor = isDarkMode ? "#121212" : "transparent";
   const textColor = isDarkMode ? "#ffffff" : "#000000";
@@ -15,17 +16,14 @@ const MainLayout = ({ children, toggleTheme, isDarkMode }) => {
       <div className="top">
         <CustomNavbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       </div>
-      {/* Only show slider on homepage */}
       {location.pathname === "/" && <GallerySlider />}
-      <div className="padding">
-        <Container>
-          {children}
-        </Container>
+      <div>
+        <Container>{children}</Container>
       </div>
+      {currentSong && <BottomMusicPlayer song={currentSong} onClose={onClose} />}
       <Footer />
     </div>
   );
 };
 
 export default MainLayout;
-

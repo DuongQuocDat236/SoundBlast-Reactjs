@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Spinner } from "react-bootstrap";
 import axios from "axios";
+import { Row, Col, Spinner } from "react-bootstrap";
 import CustomAudioCard from "../CustomAudioCard";
 
-const TrendingNow = () => {
+const TrendingNow = ({ onPlay, currentSong }) => {
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -15,33 +15,36 @@ const TrendingNow = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Error calling Trending API:", err);
+        console.error("Error fetching trending songs:", err);
         setLoading(false);
       });
   }, []);
 
   return (
-    <Container className="py-4 text-center">
-      <h2 className="mb-4 fw-bold">🔥 TRENDING NOW</h2>
-
+    <div className="my-5 px-3">
+      <h2 className="mb-4 fw-bold text-center">🔥 TRENDING NOW</h2>
       {loading ? (
-        <Spinner animation="border" variant="primary" />
+        <div className="text-center">
+          <Spinner animation="border" variant="primary" />
+        </div>
       ) : (
-        <Row className="justify-content-center">
+        <Row className="g-4">
           {songs.map((song) => (
             <Col md={4} key={song.id}>
-            <CustomAudioCard
-              id={song.id}
-              image={`http://localhost:8000/${song.image}`}
-              title={song.title}
-              artist={song.artist}
-              audioSrc={`http://localhost:8000/${song.audio}`}
-          />
+              <CustomAudioCard
+                id={song.id}
+                image={`http://localhost:8000/${song.image}`}
+                title={song.title}
+                artist={song.artist}
+                audioSrc={`http://localhost:8000/api/stream-audio/${song.audio}`}
+                currentSong={currentSong}
+                onPlay={onPlay}
+              />
             </Col>
           ))}
         </Row>
       )}
-    </Container>
+    </div>
   );
 };
 
