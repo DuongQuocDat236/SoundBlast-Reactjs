@@ -10,12 +10,13 @@ import {
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
 import "./CustomNavbar.css"; 
+import { useNavigate } from "react-router-dom";
 
 const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
   const [visitors, setVisitors] = useState(0);
   const [user, setUser] = useState(null);
   const [activeMenu, setActiveMenu] = useState("#trending");
-
+  const navigate = useNavigate();
   useEffect(() => {
     const randomVisitors = Math.floor(Math.random() * 1000) + 100;
     setVisitors(randomVisitors);
@@ -41,16 +42,16 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    window.location.href = "/";
-  };
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      navigate("/login");
+    };
 
   return (
     <BootstrapNavbar
       expand="lg"
       className="custom-navbar shadow-sm py-2"
-      style={{ background: "linear-gradient(90deg, #7b2cbf, #5ac8fa)" }}
+      style={{ background: "linear-gradient(to right, #7b2ff7, #f107a3, #00c6ff)" }}
     >
       <Container fluid className="px-4 d-flex align-items-center">
         <BootstrapNavbar.Brand
@@ -86,7 +87,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-white small">
               New Releases
             </Nav.Link>
-            <NavDropdown title="More" id="more-dropdown" className="small">
+            <NavDropdown title={<span style={{ color: "white" }}>More</span>} id="more-dropdown">
               <NavDropdown.Item as={Link} to="/genres">Genres</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/languages">Languages</NavDropdown.Item>

@@ -24,6 +24,7 @@ const TopCharts = ({ onPlay, currentSong }) => {
               title={song.title}
               artist={song.artist}
               audioSrc={`http://localhost:8000/api/stream-audio/${song.audio}`}
+              currentSong={currentSong}
               onPlay={() =>
                 onPlay({
                   id: song.id,
@@ -33,7 +34,6 @@ const TopCharts = ({ onPlay, currentSong }) => {
                   image: `http://localhost:8000/${song.image}`,
                 })
               }
-              currentSong={currentSong}
             />
           </div>
         ))}

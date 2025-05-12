@@ -8,6 +8,7 @@ import {
   FaStepForward,
   FaStepBackward,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const BottomMusicPlayer = ({ song, onClose }) => {
   const audioRef = useRef(null);
@@ -15,33 +16,28 @@ const BottomMusicPlayer = ({ song, onClose }) => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!song) return;
-
     const audio = audioRef.current;
     if (!audio) return;
-
     audio.pause();
     audio.load();
     audio.currentTime = 0;
-
-    setIsPlaying(false); // reset trạng thái
+    setIsPlaying(false);
   }, [song]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
-
     if (isPlaying) {
       audio.pause();
       setIsPlaying(false);
     } else {
       const playPromise = audio.play();
       if (playPromise !== undefined) {
-        playPromise
-          .then(() => setIsPlaying(true))
-          .catch((err) => console.warn("Play error:", err));
+        playPromise.then(() => setIsPlaying(true)).catch(console.warn);
       }
     }
   };
@@ -71,26 +67,44 @@ const BottomMusicPlayer = ({ song, onClose }) => {
     }
   };
 
-  const handleDownload = () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      alert("Please log in to download this song.");
-      return;
-    }
-
-    const a = document.createElement("a");
-    a.href = `http://localhost:8000/api/download/${song.id}`;
-    a.download = `${song.title}.mp3`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  };
-
   const formatTime = (seconds) => {
     if (!seconds || isNaN(seconds)) return "0:00";
     const min = Math.floor(seconds / 60);
     const sec = Math.floor(seconds % 60).toString().padStart(2, "0");
     return `${min}:${sec}`;
+  };
+
+    const handleDownload = async () => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      // Chuyển sang trang login nếu chưa đăng nhập
+      navigate("/login");
+      return;
+    }
+
+    try {
+      const response = await fetch(`http://localhost:8000/api/download/${song.id}`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) throw new Error("Download failed");
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${song.title}.mp3`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    } catch (err) {
+      console.error("Download error:", err);
+      alert("Download failed.");
+    }
   };
 
   if (!song) return null;

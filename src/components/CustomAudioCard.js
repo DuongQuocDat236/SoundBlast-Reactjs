@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card } from "react-bootstrap";
+import { FaPlay } from "react-icons/fa";
 
 const CustomAudioCard = ({ image, title, artist, audioSrc, id, onPlay, currentSong }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,29 +14,39 @@ const CustomAudioCard = ({ image, title, artist, audioSrc, id, onPlay, currentSo
 
   return (
     <Card
-      className="mb-4 shadow-sm position-relative overflow-hidden"
+      className="album-card shadow-sm position-relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
-      style={{ cursor: "pointer" }}
+      style={{
+        cursor: "pointer",
+        maxWidth: "180px",
+        margin: "0 auto",
+        borderRadius: "12px",
+      }}
     >
-      <div className="position-relative">
-        <Card.Img
-          variant="top"
+      <div className="card-img-wrapper">
+        <img
           src={image}
-          style={{ height: "220px", objectFit: "cover" }}
+          alt={title}
+          className="img-fluid"
+          style={{
+            width: "100%",
+            height: "180px",
+            objectFit: "cover",
+            borderRadius: "12px 12px 0 0",
+          }}
         />
         {isHovered && (
-          <div
-            className="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-50"
-          >
-            <span className="text-white display-6">▶️</span>
+          <div className="play-icon-overlay">
+            <FaPlay />
           </div>
         )}
       </div>
-      <Card.Body className="text-center">
-        <Card.Title className="mb-1 fw-semibold">{title}</Card.Title>
-        <Card.Text className="text-muted small mb-0">{artist}</Card.Text>
+
+      <Card.Body className="card-compact">
+        <Card.Title className="card-title">{title}</Card.Title>
+        <Card.Text className="card-text">{artist}</Card.Text>
       </Card.Body>
     </Card>
   );

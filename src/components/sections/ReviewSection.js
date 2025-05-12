@@ -18,7 +18,7 @@ const Review = () => {
 
   return (
     <section id="review" className="my-5 px-3">
-      <h2 className="text-center fw-bold mb-5">📝 USER REVIEWS</h2>
+      <h2 className="text-center fw-bold mb-4">📝 USER REVIEWS</h2>
 
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {reviews.map((review) => (

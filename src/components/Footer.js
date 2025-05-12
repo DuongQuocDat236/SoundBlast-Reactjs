@@ -33,7 +33,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white pt-4 pb-3 position-relative">
+    <footer className="bg-black text-white pt-3 pb-2 position-relative">
       <div className="container">
         <div className="row">
 
@@ -95,18 +95,22 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
+    </div>
         {/* Ticker */}
-        <div className="ticker-container my-3" style={{
-          background: "linear-gradient(90deg, #5ac8fa, #7b2cbf)",
-          color: "white",
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-          fontSize: "0.9rem",
-          fontWeight: "500",
-          borderRadius: "6px",
-          padding: "6px 0",
-        }}>
+        <div
+          className="ticker-container my-3"
+          style={{
+            background: "linear-gradient(90deg, #5ac8fa, #7b2cbf)",
+            color: "white",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            fontSize: "0.9rem",
+            fontWeight: "500",
+            borderRadius: "16px",
+            padding: "10px 20px", 
+            boxShadow: "0 0 10px rgba(91, 192, 235, 0.6)",
+          }}
+        >
           <div
             style={{
               display: "inline-block",
@@ -131,18 +135,17 @@ const Footer = () => {
 
         <hr className="border-secondary" />
 
-        {/* Bottom Logo + Copyright */}
-        <div className="d-flex justify-content-center align-items-center flex-column">
-          <img
-            src="/images/Logo.jpg"
-            alt="SoundBlast Logo"
-            style={{ width: '60px', borderRadius: '50%' }}
-          />
-          <p className="small text-white mt-2 mb-0 fw-semibold">
-            &copy; {new Date().getFullYear()} CopyRight@SoundBlast. All rights reserved.
-          </p>
-        </div>
-      </div>
+       {/* Bottom Logo + Copyright */}
+<div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+  <img
+    src="/images/Logo.jpg"
+    alt="SoundBlast Logo"
+    style={{ width: '40px', height: '40px', borderRadius: '50%' }}
+  />
+  <p className="small text-white mb-0 fw-semibold">
+    &copy; {new Date().getFullYear()} CopyRight@SoundBlast. All rights reserved.
+  </p>
+</div>
 
       {/* Scroll to Top */}
       {showButton && (

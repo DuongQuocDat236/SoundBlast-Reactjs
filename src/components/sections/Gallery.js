@@ -17,7 +17,7 @@ const Gallery = () => {
 
   useEffect(() => {
     const container = galleryRef.current;
-    const scrollAmount = 1;
+    const scrollAmount = 0.5;
 
     const autoScroll = setInterval(() => {
       if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
@@ -25,7 +25,7 @@ const Gallery = () => {
       } else {
         container.scrollLeft += scrollAmount;
       }
-    }, 20); // Speed of auto scroll (smaller = smoother)
+    }, 15); // Speed of auto scroll (smaller = smoother)
 
     return () => clearInterval(autoScroll);
   }, []);
@@ -39,7 +39,7 @@ const Gallery = () => {
 
   return (
     <section className="gallery-section py-5">
-      <h2 className="text-center fw-bold mb-4">🖼 GALLERY</h2>
+      <h2 className="text-center fw-bold mb-4"> GALLERY</h2>
       <div className="gallery-wrapper">
         <button className="arrow left" onClick={() => scroll('left')}>&lt;</button>
         <div className="gallery-container" ref={galleryRef}>
