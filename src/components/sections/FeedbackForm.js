@@ -38,7 +38,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <section style={{ backgroundColor: "#E5E4DB", padding: "60px 0" }}>
+    <section style={{ backgroundColor: "#E5E4DB", padding: "50px 0" }}>
       <Container>
         <h2 className="text-center fw-bold mb-4">📬 SEND FEEDBACK</h2>
         <div className="mx-auto p-4 rounded shadow-sm bg-light" style={{ maxWidth: "600px" }}>

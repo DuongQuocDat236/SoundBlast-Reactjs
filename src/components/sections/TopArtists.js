@@ -14,26 +14,20 @@ const TopArtists = () => {
 
   return (
     <section id="topartists" className="my-5 px-3">
-      <h2 className="mb-4 text-center fw-bold">🌟 TOP ARTISTS</h2>
-
-      <div className="row row-cols-2 row-cols-md-4 g-4">
+      <h2 className="mb-4 fw-bold text-center">🌟 TOP ARTISTS</h2>
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
         {artists.map((artist) => (
-          <div className="col" key={artist.id}>
-            <Card className="text-center h-100 shadow">
+          <div className="col text-center" key={artist.id}>
+            <Card className="h-100 shadow artist-card">
               <Card.Img
                 variant="top"
                 src={`http://localhost:8000/${artist.image}`}
-                style={{
-                  width: "100%",
-                  height: "250px",
-                  objectFit: "cover",
-                  borderRadius: "12px"
-                }}
+                className="artist-img"
               />
-                <Card.Body>
-                  <Card.Title>{artist.name}</Card.Title>
-                  <Card.Text className="text-muted">{artist.country}</Card.Text>
-                </Card.Body>
+              <Card.Body>
+                <Card.Title className="artist-name">{artist.name}</Card.Title>
+                <Card.Text className="artist-country">{artist.country}</Card.Text>
+              </Card.Body>
             </Card>
           </div>
         ))}
@@ -43,5 +37,3 @@ const TopArtists = () => {
 };
 
 export default TopArtists;
-
-

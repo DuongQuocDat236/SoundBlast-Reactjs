@@ -15,17 +15,17 @@ const Genres = () => {
   return (
     <section id="genres" className="my-5 px-3">
       <h2 className="mb-4 text-center fw-bold">🎼 GENRES</h2>
-      <div className="row row-cols-2 row-cols-md-4 g-4">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
         {genres.map((genre) => (
           <div className="col" key={genre.id}>
-            <Card className="h-100 shadow text-center">
-              <Card.Img
-                variant="top"
-                src={`http://localhost:8000/${genre.image}`}
-                style={{ height: "200px", objectFit: "cover" }}
-              />
+              <Card className="h-100 shadow genre-card text-center">
+                <Card.Img
+                  variant="top"
+                  src={`http://localhost:8000/${genre.image}`}
+                  className="album-img"
+                />
               <Card.Body>
-                <Card.Title>{genre.name}</Card.Title>
+                <Card.Title className="genre-title">{genre.name}</Card.Title>
               </Card.Body>
             </Card>
           </div>
