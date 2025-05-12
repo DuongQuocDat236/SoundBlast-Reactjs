@@ -32,6 +32,7 @@ import SearchResultPage from "./components/SearchResultPage";
 import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import BottomMusicPlayer from "./components/BottomMusicPlayer";
+import GenreDetailPage from "./pages/GenreDetailPage";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -63,6 +64,7 @@ function App() {
           <Route path="/top-charts" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><TopChartsPage /></MainLayout>} />
           <Route path="/new-releases" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><NewReleasesPage /></MainLayout>} />
           <Route path="/genres" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><GenresPage /></MainLayout>} />
+          <Route path="/genres/:genreName" element={<GenreDetailPage />} />
           <Route path="/gallery" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><GalleryPage /></MainLayout>} />
           <Route path="/languages" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><LanguagesPage /></MainLayout>} />
           <Route path="/latest-albums" element={<MainLayout toggleTheme={toggleTheme} isDarkMode={isDarkMode}><LatestAlbumsPage /></MainLayout>} />

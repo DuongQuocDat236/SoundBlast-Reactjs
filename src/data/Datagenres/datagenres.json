@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Pop",
+      "description": "Popular music with catchy melodies and broad appeal.",
+      "image": "images/imagesgenres/pop.png"
+    },
+    {
+      "name": "Rock",
+      "description": "Energetic music featuring electric guitars, drums, and powerful vocals.",
+      "image": "images/imagesgenres/rock.png"
+    },
+    {
+      "name": "Jazz",
+      "description": "Smooth and improvisational music with rich harmonies and syncopation.",
+      "image": "images/imagesgenres/jazz.png"
+    },
+    {
+      "name": "70'S",
+      "description": "Rhythmic music with rap vocals and strong beats, rooted in urban culture.",
+      "image": "images/imagesgenres/70's.png"
+    },
+    {
+      "name": "Classical",
+      "description": "Timeless orchestral music composed by legendary artists.",
+      "image": "images/imagesgenres/classical.png"
+    },
+    {
+      "name": "Techno",
+      "description": "Modern music created with electronic instruments and digital production.",
+      "image": "images/imagesgenres/techno.png"
+    }
+  ]

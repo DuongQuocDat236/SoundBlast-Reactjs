@@ -1,0 +1,283 @@
+[
+    {
+      "genre": "Pop",
+      "songs": [
+        {
+          "title": "Shape of You",
+          "artist": "Ed Sheeran",
+          "duration": "3:53",
+          "image": "/images/imagesgenres/popsong1.png",
+          "audio": "/audio/audiogenresdetail/audio1.mp3"
+        },
+        {
+          "title": "Uptown Funk",
+          "artist": "Mark Ronson ft. Bruno Mars",
+          "duration": "4:29",
+          "image": "/images/imagesgenres/popsong2.png",
+          "audio": "/audio/audiogenresdetail/audio2.mp3"
+        },
+        {
+            "title": "She Said That",
+            "artist": "Naomin",
+            "duration": "3:54",
+            "image": "/images/imagesgenres/popsong1.png",
+            "audio": "/audio/audiogenresdetail/audio3.mp3"
+          },
+          {
+            "title": "Towers",
+            "artist": "JonnyGuys",
+            "duration": "4:30",
+            "image": "/images/imagesgenres/popsong2.png",
+            "audio": "/audio/audiogenresdetail/audio4.mp3"
+          },
+          {
+            "title": "The One of the House",
+            "artist": "Edward NewGate",
+            "duration": "3:54",
+            "image": "/images/imagesgenres/popsong1.png",
+            "audio": "/audio/audiogenresdetail/audio5.mp3"
+          },
+          {
+            "title": "Only G",
+            "artist": "Mark",
+            "duration": "4:39",
+            "image": "/images/imagesgenres/popsong2.png",
+            "audio": "/audio/audiogenresdetail/audio6.mp3"
+          }
+      ]
+    },
+    {
+      "genre": "Rock",
+      "songs": [
+        {
+          "title": "Sweet Child O' Mine ",
+          "artist": "Guns N' Roses ",
+          "duration": "5:56",
+          "image": "/images/imagesgenres/rocksong1.png",
+          "audio": "/audio/audiogenresdetail/audio1.mp3"
+        },
+        {
+          "title": "Bohemian Rhapsody",
+          "artist": "Queen ",
+          "duration": "5:45",
+          "image": "/images/imagesgenres/rocksong2.png",
+          "audio": "/audio/audiogenresdetail/audio2.mp3"
+        },
+        {
+            "title": "Corn Field",
+            "artist": "WHo WHo",
+            "duration": "5:16",
+            "image": "/images/imagesgenres/rocksong1.png",
+            "audio": "/audio/audiogenresdetail/audio3.mp3"
+          },
+          {
+            "title": "Holly God",
+            "artist": "Kissy",
+            "duration": "3:55",
+            "image": "/images/imagesgenres/rocksong2.png",
+            "audio": "/audio/audiogenresdetail/audio4.mp3"
+          },{
+            "title": "Stupid things",
+            "artist": "Gumball",
+            "duration": "5:26",
+            "image": "/images/imagesgenres/rocksong1.png",
+            "audio": "/audio/audiogenresdetail/audio5.mp3"
+          },
+          {
+            "title": "Beach on way",
+            "artist": "King",
+            "duration": "2:55",
+            "image": "/images/imagesgenres/rocksong2.png",
+            "audio": "/audio/audiogenresdetail/audio6.mp3"
+          }
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "songs": [
+        {
+          "title": "Take Five",
+          "artist": "Dave Brubeck",
+          "duration": "5:24",
+          "image": "/images/imagesgenres/jazzsong1.png",
+          "audio": "/audio/audiogenresdetail/audio6.mp3"
+        },
+        {
+          "title": "So What",
+          "artist": "Miles Davis",
+          "duration": "9:22",
+          "image": "/images/imagesgenres/jazzsong2.png",
+          "audio": "/audio/audiogenresdetail/audio5.mp3"
+        },
+        {
+            "title": "Take me to the sky",
+            "artist": "Dangle Foursel",
+            "duration": "5:24",
+            "image": "/images/imagesgenres/jazzsong1.png",
+            "audio": "/audio/audiogenresdetail/audio4.mp3"
+          },
+          {
+            "title": "Spider Talk",
+            "artist": "Jones Wings",
+            "duration": "3:52",
+            "image": "/images/imagesgenres/jazzsong2.png",
+            "audio": "/audio/audiogenresdetail/audio3.mp3"
+          },
+          {
+            "title": "Take Four",
+            "artist": "Cave Inside",
+            "duration": "4:24",
+            "image": "/images/imagesgenres/jazzsong1.png",
+            "audio": "/audio/audiogenresdetail/audio2.mp3"
+          },
+          {
+            "title": "Song of the Day",
+            "artist": "Miles Moracles",
+            "duration": "6:32",
+            "image": "/images/imagesgenres/jazzsong2.png",
+            "audio": "/audio/audiogenresdetail/audio1.mp3"
+          }
+      ]
+    },
+    {
+      "genre": "70'S",
+      "songs": [
+        {
+          "title": "Lose Yourself",
+          "artist": "Eminem",
+          "duration": "5:26",
+          "image": "/images/imagesgenres/70song1.png",
+          "audio": "/audio/audiogenresdetail/audio1.mp3"
+        },
+        {
+          "title": "Juicy",
+          "artist": "The Notorious B.I.G.",
+          "duration": "5:02",
+          "image": "/images/imagesgenres/70song2.png",
+          "audio": "/audio/audiogenresdetail/audio2.mp3"
+        },
+        {
+            "title": "Lose Control",
+            "artist": "Foxie",
+            "duration": "2:34",
+            "image": "/images/imagesgenres/70song1.png",
+            "audio": "/audio/audiogenresdetail/audio3.mp3"
+          },
+          {
+            "title": "The Week",
+            "artist": "O.M.G",
+            "duration": "4:20",
+            "image": "/images/imagesgenres/70song2.png",
+            "audio": "/audio/audiogenresdetail/audio4.mp3"
+          },
+          {
+            "title": "Love Myself",
+            "artist": "Billish",
+            "duration": "4:26",
+            "image": "/images/imagesgenres/70song1.png",
+            "audio": "/audio/audiogenresdetail/audio5.mp3"
+          },
+          {
+            "title": "Jupiter",
+            "artist": "The Moter",
+            "duration": "3:22",
+            "image": "/images/imagesgenres/70song2.png",
+            "audio": "/audio/audiogenresdetail/audio6.mp3"
+          }
+      ]
+    },
+    {
+      "genre": "Classical",
+      "songs": [
+        {
+          "title": "Symphony No. 5",
+          "artist": "Ludwig van Beethoven",
+          "duration": "7:12",
+          "image": "/images/imagesgenres/classsong1.png",
+          "audio": "/audio/audiogenresdetail/audio6.mp3"
+        },
+        {
+          "title": "Canon in D",
+          "artist": "Johann Pachelbel",
+          "duration": "4:48",
+          "image": "/images/imagesgenres/classsong2.png",
+          "audio": "/audio/audiogenresdetail/audio5.mp3"
+        },
+        {
+            "title": "Systems Worker",
+            "artist": "Astra ",
+            "duration": "5:32",
+            "image": "/images/imagesgenres/classsong1.png",
+            "audio": "/audio/audiogenresdetail/audio4.mp3"
+          },
+          {
+            "title": "Canyon Grand",
+            "artist": "Panadol",
+            "duration": "4:38",
+            "image": "/images/imagesgenres/classsong2.png",
+            "audio": "/audio/audiogenresdetail/audio3.mp3"
+          },
+          {
+            "title": "Symphony No. 4",
+            "artist": "Beethoven",
+            "duration": "5:32",
+            "image": "/images/imagesgenres/classsong1.png",
+            "audio": "/audio/audiogenresdetail/audio2.mp3"
+          },
+          {
+            "title": "Canon on David",
+            "artist": "Johann Walker",
+            "duration": "4:34",
+            "image": "/images/imagesgenres/classsong2.png",
+            "audio": "/audio/audiogenresdetail/audio1.mp3"
+          }
+      ]
+    },
+    {
+      "genre": "Techno",
+      "songs": [
+        {
+          "title": "Doggo's Here",
+          "artist": "Sozz Guys",
+          "duration": "6:04",
+          "image": "/images/imagesgenres/technosong1.png",
+          "audio": "/audio/audiogenresdetail/audio6.mp3"
+        },
+        {
+          "title": "TitanAttack",
+          "artist":"  Guetta ft. Mia Kalifa",
+          "duration": "4:05",
+          "image": "/images/imagesgenres/technosong2.png",
+          "audio": "/audio/audiogenresdetail/audio5.mp3"
+        },
+        {
+            "title": "Sanitals",
+            "artist": "Mars Xirsan",
+            "duration": "4:04",
+            "image": "/images/imagesgenres/technosong1.png",
+            "audio": "/audio/audiogenresdetail/audio4.mp3"
+          },
+          {
+            "title": "Sanium",
+            "artist": "Savid Guetta ft. Sia",
+            "duration": "3:15",
+            "image": "/images/imagesgenres/technosong2.png",
+            "audio": "/audio/audiogenresdetail/audio3.mp3"
+          },
+          {
+            "title": "Animal Squad",
+            "artist": "Marting Garrix",
+            "duration": "5:34",
+            "image": "/images/imagesgenres/technosong1.png",
+            "audio": "/audio/audiogenresdetail/audio2.mp3"
+          },
+          {
+            "title": "Titaniun2",
+            "artist": "David Gueetta ft. Sia",
+            "duration": "4:35",
+            "image": "/images/imagesgenres/technosong2.png",
+            "audio": "/audio/audiogenresdetail/audio1.mp3"
+          }
+      ]
+    }
+  ]

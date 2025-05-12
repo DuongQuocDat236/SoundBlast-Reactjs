@@ -1,32 +1,45 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import datagenres from "../data/Datagenres/datagenres.json";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import "./GenresPage.css"; 
+
 
 const GenresPage = () => {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    axios.get("/data/genres.json")
-      .then(res => setGenres(res.data))
-      .catch(err => console.error("Error fetching genres", err));
+    setGenres(datagenres);
   }, []);
 
   return (
-    <Container className="py-5">
-      <h2 className="text-center mb-4">Genres</h2>
-      <Row>
-        {genres.map((genre, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card className="h-100 text-center">
-              <Card.Body>
-                <Card.Title>{genre.name}</Card.Title>
-                <Card.Text>{genre.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <div className="genres-page">
+      <Container className="py-5">
+        <h2 className="text-center mb-5 genres-title">Genres</h2>
+        <Row>
+          {genres.map((genre, index) => (
+            <Col key={index} md={4} className="mb-4">
+              <Link to={`/genres/${genre.name}`} style={{ textDecoration: "none" }}>
+                <Card className="genre-card h-100 text-center">
+                  <div className="genre-image-wrapper">
+                    <Card.Img
+                      variant="top"
+                      src={genre.image}
+                      alt={genre.name}
+                      className="genre-image"
+                    />
+                  </div>
+                  <Card.Body>
+                    <Card.Title className="genre-name">{genre.name}</Card.Title>
+                    <Card.Text className="genre-description">{genre.description}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </div>
   );
 };
 
