@@ -81,8 +81,8 @@
   height: 40px;
   border: none;
   border-radius: 50%;
-  background: linear-gradient(135deg, #000000, #e5e4db); /* Spotify style */
-  color: white;
+
+  color: rgb(0, 0, 0);
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@
 
 .playButton:hover {
   transform: scale(1.1);
-  background: linear-gradient(135deg, #e5e4db, #2c2b25);
+
 }
 
 
