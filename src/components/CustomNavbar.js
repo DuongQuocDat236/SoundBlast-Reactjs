@@ -51,7 +51,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
     <BootstrapNavbar
       expand="lg"
       className="custom-navbar shadow-sm py-2"
-      style={{ background: "linear-gradient(to right, #7b2ff7, #f107a3, #00c6ff)" }}
+      style={{ background: "linear-gradient(to right,rgb(106, 182, 233),rgb(247, 56, 231))" }}
     >
       <Container fluid className="px-4 d-flex align-items-center">
         <BootstrapNavbar.Brand
@@ -78,16 +78,16 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             activeKey={activeMenu}
             onSelect={(selectedKey) => setActiveMenu(selectedKey)}
           >
-            <Nav.Link as={Link} to="/trending" eventKey="/trending" className="nav-link-custom text-white small">
+            <Nav.Link as={Link} to="/trending" eventKey="/trending" className="nav-link-custom text-black small">
               Trending
             </Nav.Link>
-            <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts" className="nav-link-custom text-white small">
+            <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts" className="nav-link-custom text-black small">
               TopCharts
             </Nav.Link>
-            <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-white small">
+            <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-black small">
               New Releases
             </Nav.Link>
-            <NavDropdown title={<span style={{ color: "white" }}>More</span>} id="more-dropdown">
+            <NavDropdown title={<span style={{ color: "black" }}>More</span>} id="more-dropdown">
               <NavDropdown.Item as={Link} to="/genres">Genres</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/languages">Languages</NavDropdown.Item>

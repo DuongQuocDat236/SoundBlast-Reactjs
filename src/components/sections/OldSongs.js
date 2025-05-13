@@ -12,7 +12,13 @@ const OldSongs = ({ onPlay }) => {
   }, []);
 
   const handlePlay = (song) => {
-    if (onPlay) onPlay(song); // Gửi bài hát lên BottomMusicPlayer
+    if (onPlay) {
+      const audio = song.audio.includes("http")
+        ? song.audio
+        : `http://localhost:8000/stream-audio/${song.audio}`;
+
+      onPlay({ ...song, audio });
+    }
   };
 
   return (

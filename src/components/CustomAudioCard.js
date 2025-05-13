@@ -5,12 +5,12 @@ import { FaPlay } from "react-icons/fa";
 const CustomAudioCard = ({ image, title, artist, audioSrc, id, onPlay, currentSong }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleClick = () => {
-    const isSameSong = currentSong && currentSong.audioSrc === audioSrc;
-    if (!isSameSong && onPlay) {
-      onPlay({ title, artist, audioSrc, image, id });
-    }
-  };
+      const handleClick = () => {
+        const isSameSong = currentSong && currentSong.id === id;
+        if (!isSameSong && onPlay) {
+          onPlay({ title, artist, audio: audioSrc, image, id });
+        }
+      };
 
   return (
     <Card

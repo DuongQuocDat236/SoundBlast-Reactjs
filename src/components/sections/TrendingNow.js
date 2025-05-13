@@ -32,14 +32,20 @@ const TrendingNow = ({ onPlay, currentSong }) => {
           {songs.map((song) => (
             <Col md={4} key={song.id}>
               <CustomAudioCard
-                id={song.id}
-                image={`http://localhost:8000/${song.image}`}
-                title={song.title}
-                artist={song.artist}
-                audioSrc={`http://localhost:8000/api/stream-audio/${song.audio}`}
-                currentSong={currentSong}
-                onPlay={onPlay}
-              />
+                  id={song.id}
+                  image={`http://localhost:8000/${song.image}`}
+                  title={song.title}
+                  artist={song.artist}
+                  audioSrc={`http://localhost:8000/stream-audio/${song.audio}`}
+                  currentSong={currentSong}
+                  onPlay={() =>
+                    onPlay({
+                      ...song,
+                      image: `http://localhost:8000/${song.image}`,
+                      audio: `http://localhost:8000/stream-audio/${song.audio}`,
+                    })
+                  }
+                />
             </Col>
           ))}
         </Row>
