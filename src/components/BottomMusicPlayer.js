@@ -22,12 +22,12 @@ const BottomMusicPlayer = ({ song, onClose }) => {
     if (!song || !song.audio) return;
     const audio = audioRef.current;
     if (!audio) return;
-
+  
     setIsPlaying(false);
     audio.pause();
     audio.load();
     audio.currentTime = 0;
-  }, [song.id]);
+  }, [song]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
