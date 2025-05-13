@@ -99,7 +99,7 @@ const TopArtistsPage = () => {
 
   return (
     <div className={styles.topArtistsPage}>
-      <h1 className={styles.mainTitle}>Top ca sĩ</h1>
+      <h1 className={styles.mainTitle}>TopArtistsPage</h1>
 
       <Section title="Hot Search" data={hotsearch} {...{ onPlay: handlePlay, currentAudio, audioRefs, progresses, durations }} />
       <Section title="Yêu thích" data={favourite} {...{ onPlay: handlePlay, currentAudio, audioRefs, progresses, durations }} />

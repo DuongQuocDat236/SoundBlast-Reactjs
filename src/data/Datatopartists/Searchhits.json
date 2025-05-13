@@ -7,7 +7,7 @@
     },
     {
         "id" : 2,
-        "title" : ". Love Story ",
+        "title" : " When You Say Nothing At All ",
         "image" : " images/imagestopartists/Yesterday Once More - The Carpenters.jpg",
         "audio" : "audio/audiotopartists/Ronan Keating - When You Say Nothing At All.mp3"
     },
@@ -19,19 +19,19 @@
     },
     {
         "id" : 4,
-        "title" : ". Love Story ",
+        "title" : " Fiona Fung ",
         "image" : " images/imagestopartists/Thinking Of You - ATC.jpg",
         "audio" : "audio/audiotopartists/Proud Of You - Fiona Fung (Lyrics & Vietsub).mp3"
     },
     {
         "id" : 5,
-        "title" : ". Love Story ",
+        "title" : "The Day You Went Away ",
         "image" : " images/imagestopartists/The Day You Went Away - M2M.jpg",
         "audio" : "audio/audiotopartists/M2M - The Day You Went Away.mp3"
     },
     {
         "id" : 6,
-        "title" : ". Love Story ",
+        "title" : " Pretty Boy",
         "image" : " images/imagestopartists/Safe And Sound - Taylor Swift.jpg",
         "audio" : "audio/audiotopartists/M2M - Pretty Boy.mp3"
     }
