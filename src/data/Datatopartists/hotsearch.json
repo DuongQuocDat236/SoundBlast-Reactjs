@@ -1,7 +1,7 @@
 [
     {
         "id" : 1,
-        "title" : ". Love Story ",
+        "title" : "You Belong With Me",
         "image" : " images/imagestopartists/Hello - Adele.jpg",
         "audio" : "audio/audiotopartists/Taylor Swift - You Belong With Me.mp3"
     },
@@ -13,25 +13,25 @@
     },
     {
         "id" : 3,
-        "title" : ". Love Story ",
+        "title" : " As Long As You Love Me ",
         "image" : " images/imagestopartists/If I Let You Go - Westlife.jpg",
         "audio" : "audio/audiotopartists/Backstreet Boys - As Long As You Love Me (Official HD Video).mp3"
     },
     {
         "id" : 4,
-        "title" : ". Love Story ",
+        "title" : "Cry on My Shoulder ",
         "image" : " images/imagestopartists/If We Hold On Together - Diana Ross.jpg",
         "audio" : "audio/audiotopartists/Cry on My Shoulder.mp3"
     },
     {
         "id" : 5,
-        "title" : ". Love Story ",
+        "title" : " Nothing's Gonna Change My Love For You ",
         "image" : " images/imagestopartists/Beautiful In White - Westlife.jpg",
         "audio" : "audio/audiotopartists/Glenn Medeiros - Nothing's Gonna Change My Love For You (Official Music Video) [HD].mp3"
     },
     {
         "id" : 6,
-        "title" : ". Love Story ",
+        "title" : "Forever And One ",
         "image" : " images/imagestopartists/Impossible - Jame Arthur.jpg",
         "audio" : "audio/audiotopartists/HELLOWEEN - Forever And One (Neverland) (Official Music Video).mp3"
     }

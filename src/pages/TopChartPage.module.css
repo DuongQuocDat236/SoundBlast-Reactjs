@@ -76,24 +76,28 @@
 }
 
 /* Nút play hình tròn với tam giác */
-.playBtn {
-  width: 36px;
-  height: 36px;
+.playButton {
+  width: 40px;
+  height: 40px;
+  border: none;
   border-radius: 50%;
-  background-color: white;
-  border: 2px solid #6a5acd;
+  background: linear-gradient(135deg, #000000, #e5e4db); /* Spotify style */
+  color: white;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin: 0 auto; /* Căn giữa ngang */
 }
 
-.playBtn:hover {
-  background-color: #6a5acd;
-  transform: scale(1.05);
+.playButton:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e5e4db, #2c2b25);
 }
+
 
 .playIcon {
   width: 0;

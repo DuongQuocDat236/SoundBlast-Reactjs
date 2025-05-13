@@ -8,23 +8,26 @@ import topNhacAuMyData from "../data/Datatrending/Topnhacaumy.json";
 import topNhacVietData from "../data/Datatrending/Topnhacviet.json";
 
 const TrendingPage = () => {
-  const [activeAudio, setActiveAudio] = useState(null);
+  const [playingId, setPlayingId] = useState(null);
   const audioRefs = useRef({});
 
   const handlePlay = (id) => {
     const currentAudio = audioRefs.current[id];
-    if (activeAudio && activeAudio !== id) {
-      const prevAudio = audioRefs.current[activeAudio];
-      prevAudio?.pause();
-      prevAudio.currentTime = 0;
+
+    if (playingId && playingId !== id) {
+      const prevAudio = audioRefs.current[playingId];
+      if (prevAudio) {
+        prevAudio.pause();
+        prevAudio.currentTime = 0;
+      }
     }
 
     if (currentAudio?.paused) {
       currentAudio.play();
-      setActiveAudio(id);
+      setPlayingId(id);
     } else {
-      currentAudio?.pause();
-      setActiveAudio(null);
+      currentAudio.pause();
+      setPlayingId(null);
     }
   };
 
@@ -67,9 +70,9 @@ const TrendingPage = () => {
       <button
         onClick={() => handlePlay(item.id)}
         className={styles.playButton}
-        aria-label={audioRefs.current[item.id]?.paused ? "Play" : "Pause"}
+        aria-label={playingId === item.id ? "Pause" : "Play"}
       >
-        {audioRefs.current[item.id]?.paused ? <FaPlay /> : <FaPause />}
+        {playingId === item.id ? <FaPause /> : <FaPlay />}
       </button>
       <div className={styles.trackInfo}>{item.title}</div>
       <div className={styles.time}>
@@ -83,16 +86,15 @@ const TrendingPage = () => {
         <div
           className={styles.progress}
           data-progress={item.id}
-        style={{
-          width: `${
-            audioRefs.current[item.id]?.currentTime &&
-            audioRefs.current[item.id].duration
-              ? (audioRefs.current[item.id].currentTime /
-                  audioRefs.current[item.id].duration) * 100
-              : 0
-          }%`,
-        }}
-
+          style={{
+            width: `${
+              audioRefs.current[item.id]?.currentTime &&
+              audioRefs.current[item.id].duration
+                ? (audioRefs.current[item.id].currentTime /
+                    audioRefs.current[item.id].duration) * 100
+                : 0
+            }%`,
+          }}
         />
       </div>
       <button
@@ -116,7 +118,7 @@ const TrendingPage = () => {
         <div className={`${styles.col} ${styles.albumCol}`}>
           <div className={styles.topMusicContainer}>
             <h3 className={styles.sectionTitle}>Trending now</h3>
-            <h4 className={styles.subTitle}>Top nhạc Việt</h4>
+            <h4 className={styles.subTitle}>Top nhạc Việt Nam</h4>
             <div className={styles.albumList}>
               {hotNhacVietData.map((item) => (
                 <div className={styles.albumItem} key={item.id}>

@@ -29,7 +29,7 @@ const NewReleasesPage = () => {
 
   return (
     <div className={styles.musicWrapper}>
-      <h3 className={styles.sectionTitle}>BẢN PHÁT HÀNH MỚI NHẤT 2025</h3>
+      <h3 className={styles.sectionTitle}>NewReleasesPage 2025</h3>
       {data.map((item) => (
         <div className={`${styles.musicItem} ${showText === item.id ? styles.expanded : ""}`} key={item.id}>
           <div className={styles.left}>

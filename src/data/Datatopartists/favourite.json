@@ -7,7 +7,7 @@
     },
     {
         "id" : 2,
-        "title" : ". Love Story ",
+        "title" : "Carly Rae Jepsen ",
         "image" : " images/imagestopartists/1. Pretty Boy - M2M.jpg",
         "audio" : "audio/audiotopartists/Carly Rae Jepsen - Call Me Maybe.mp3"
     },
@@ -19,19 +19,19 @@
     },
     {
         "id" : 4,
-        "title" : ". Love Story ",
+        "title" : "Cry on My Shoulder ",
         "image" : " images/imagestopartists/Beautiful In White - Westlife.jpg",
         "audio" : "audio/audiotopartists/Cry on My Shoulder.mp3"
     },
     {
         "id" : 5,
-        "title" : ". Love Story ",
+        "title" : " Nothing's Gonna Change My Love For You ",
         "image" : " images/imagestopartists/Beautiful In White - Westlife.jpg",
         "audio" : "audio/audiotopartists/Glenn Medeiros - Nothing's Gonna Change My Love For You (Official Music Video) [HD].mp3"
     },
     {
         "id" : 6,
-        "title" : ". Love Story ",
+        "title" : "Neverland",
         "image" : " images/imagestopartists/Cry On My Shoulder - Superstars.jpg",
         "audio" : "audio/audiotopartists/HELLOWEEN - Forever And One (Neverland) (Official Music Video).mp3"
     }

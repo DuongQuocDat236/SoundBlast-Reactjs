@@ -11,7 +11,6 @@ const GallerySlider = () => {
       .then((data) => setSlides(data))
       .catch((err) => console.error("Error load slider:", err));
   }, []);
-
   return (
     <div className="slider-container">
       <Carousel fade controls={false} indicators={false} interval={4000}>
