@@ -6,7 +6,6 @@
   /* Blur effect when scrolling */
   .navbar-blur {
     backdrop-filter: blur(12px);
-    background-color: rgba(123, 44, 191, 0.8) !important;
   }
   
   /* Hover underline */

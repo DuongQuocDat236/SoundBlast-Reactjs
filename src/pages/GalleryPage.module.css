@@ -1,71 +1,107 @@
 .artistInfoContainer {
-    display: flex;
-    gap: 20px;
-    margin-top: 40px;
-  }
-  
-  .leftColumn,
-  .middleColumn,
-  .rightColumn {
-    flex: 1;
-  }
-  
-  .largeImage {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .smallImages {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .smallImages img {
-    flex: 1;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .tallImage {
-    margin-top: 10px;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .videoThumb {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .videoText {
-    margin-top: 10px;
-  }
-  
-  .infoBox {
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
-  
-  .moreLinks {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .moreLinks img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
+  display: flex;
+  gap: 20px;
+  margin-top: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Cột trái */
+.leftColumn,
+.middleColumn,
+.rightColumn {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Ảnh lớn */
+.largeImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Nhóm ảnh nhỏ ngang */
+.smallImages {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.smallImages img {
+  flex: 1;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ảnh dọc */
+.tallImage {
+  margin-top: 10px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Video thumbnail */
+.videoThumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Text dưới video */
+.videoText {
+  margin-top: 10px;
+}
+
+/* Box thông tin */
+.infoBox {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoBox:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Playlist link */
+.moreLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.moreLinks img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng hover chung cho ảnh, video, playlist */
+.largeImage:hover,
+.smallImages img:hover,
+.tallImage:hover,
+.videoThumb:hover,
+.moreLinks img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

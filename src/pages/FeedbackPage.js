@@ -62,7 +62,7 @@ const FeedbackPage = () => {
       />
       <div style={{ position: "relative", zIndex: 1, minHeight: "100vh", padding: "60px 0" }}>
         <Container>
-          <h2 className="text-center fw-bold mb-4" style={{ color: "#fff" }}>📬 SEND FEEDBACK</h2>
+          <h2 className="text-center fw-bold mb-4 text-black">📬 SEND FEEDBACK</h2>
           <div
             className="mx-auto p-4 rounded shadow-sm"
             style={{ maxWidth: "600px", backgroundColor: "#FFF9E6" }}

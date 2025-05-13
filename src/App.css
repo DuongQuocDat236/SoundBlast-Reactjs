@@ -8,11 +8,11 @@ body {
 }
 
 /* ==== SHARED CARD STYLES ==== */
-.card-img-top, .album-img, .genre-img, .artist-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
+.album-card, .genre-card, .artist-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .album-card, .genre-card, .artist-card {
@@ -24,6 +24,7 @@ body {
 
 .album-card:hover, .genre-card:hover, .artist-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 12px 4px rgba(0, 123, 255, 0.4);
 }
 
 .card-compact .card-title {
@@ -108,14 +109,14 @@ body {
   letter-spacing: 0.5px;
 }
 .dropdown-menu {
-  background: linear-gradient(to right, #7b2ff7, #f107a3, #00c6ff) !important;
+  background: linear-gradient(to right, #bbe7f6, #d592eb) !important;
   border: none;
 }
 
 .dropdown-menu .dropdown-item {
-  color: #fff;
+  color: #080808;
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(250, 246, 5, 0.15);
 }
