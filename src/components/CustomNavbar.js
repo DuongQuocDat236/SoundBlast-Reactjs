@@ -51,7 +51,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
     <BootstrapNavbar
       expand="lg"
       className="custom-navbar shadow-sm py-2"
-      style={{ background: "linear-gradient(to right, #7b2ff7, #f107a3, #00c6ff)" }}
+      style={{ background: "linear-gradient(90deg, #5ac8fa, #7b2cbf);" }}
     >
       <Container fluid className="px-4 d-flex align-items-center">
         <BootstrapNavbar.Brand
@@ -78,16 +78,16 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             activeKey={activeMenu}
             onSelect={(selectedKey) => setActiveMenu(selectedKey)}
           >
-            <Nav.Link as={Link} to="/trending" eventKey="/trending" className="nav-link-custom text-white small">
+            <Nav.Link as={Link} to="/trending" eventKey="/trending" className="nav-link-custom text-black small">
               Trending
             </Nav.Link>
-            <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts" className="nav-link-custom text-white small">
+            <Nav.Link as={Link} to="/top-charts" eventKey="/top-charts" className="nav-link-custom text-black small">
               TopCharts
             </Nav.Link>
-            <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-white small">
+            <Nav.Link as={Link} to="/new-releases" eventKey="/new-releases" className="nav-link-custom text-black small">
               New Releases
             </Nav.Link>
-            <NavDropdown title={<span style={{ color: "white" }}>More</span>} id="more-dropdown">
+            <NavDropdown title={<span style={{ color: "black" }}>More</span>} id="more-dropdown">
               <NavDropdown.Item as={Link} to="/genres">Genres</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/languages">Languages</NavDropdown.Item>
@@ -105,7 +105,7 @@ const CustomNavbar = ({ toggleTheme, isDarkMode }) => {
             <div onClick={toggleTheme} role="button" title="Toggle theme" className="ms-2">
               {isDarkMode ? "🌞" : "🌙"}
             </div>
-            <div className="d-flex align-items-center small text-white">
+            <div className="d-flex align-items-center small text-black">
               <span className="me-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.15957 11.62C9.12957 11.62 9.10957 11.62 9.07957 11.62C9.02957 11.61 8.95957 11.61 8.89957 11.62C5.99957 11.53 3.80957 9.25 3.80957 6.44C3.80957 3.58 6.13957 1.25 8.99957 1.25C11.8596 1.25 14.1896 3.58 14.1896 6.44C14.1796 9.25 11.9796 11.53 9.18957 11.62C9.17957 11.62 9.16957 11.62 9.15957 11.62ZM8.99957 2.75C6.96957 2.75 5.30957 4.41 5.30957 6.44C5.30957 8.44 6.86957 10.05 8.85957 10.12C8.91957 10.11 9.04957 10.11 9.17957 10.12C11.1396 10.03 12.6796 8.42 12.6896 6.44C12.6896 4.41 11.0296 2.75 8.99957 2.75Z" fill="#292D32"/>
 <path d="M16.5394 11.75C16.5094 11.75 16.4794 11.75 16.4494 11.74C16.0394 11.78 15.6194 11.49 15.5794 11.08C15.5394 10.67 15.7894 10.3 16.1994 10.25C16.3194 10.24 16.4494 10.24 16.5594 10.24C18.0194 10.16 19.1594 8.96 19.1594 7.49C19.1594 5.97 17.9294 4.74 16.4094 4.74C15.9994 4.75 15.6594 4.41 15.6594 4C15.6594 3.59 15.9994 3.25 16.4094 3.25C18.7494 3.25 20.6594 5.16 20.6594 7.5C20.6594 9.8 18.8594 11.66 16.5694 11.75C16.5594 11.75 16.5494 11.75 16.5394 11.75Z" fill="#292D32"/>
